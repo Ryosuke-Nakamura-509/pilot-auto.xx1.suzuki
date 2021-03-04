@@ -6,7 +6,7 @@ repositories:
     version: ros2
   autoware/launcher:
     type: git
-    url: https://github.com/tier4/autoware_launcher.iv.universe.git
+    url: git@github.com:tier4/autoware_launcher.jpntaxi.git
     version: ros2
   # description
   description/sensor/sensor_description:
@@ -17,9 +17,9 @@ repositories:
     type: git
     url: https://github.com/tier4/velodyne_simulator.git
     version: ros2
-  description/vehicle/lexus_description:
+  description/vehicle/jpntaxi_description:
     type: git
-    url: https://github.com/tier4/lexus_description.iv.universe.git
+    url: git@github.com:tier4/jpntaxi_description.iv.git
     version: ros2
   # simulator
   simulator/planning_simulator:
@@ -95,7 +95,12 @@ repositories:
     type: git
     url: https://github.com/tier4/rqt_runtime_monitor.git
     version: dashing-devel
-# calibration
+  vendor/foa:
+    type: git
+    url: git@github.com:tier4/FieldOperatorApplication.git
+    version: ros2
+
+  # calibration
 #  calibration/tunable_static_tf_broadcaster:
 #    type: git
 #    url: https://github.com/tier4/tunable_static_tf_broadcaster.git

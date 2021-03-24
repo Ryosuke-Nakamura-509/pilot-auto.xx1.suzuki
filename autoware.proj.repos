@@ -21,6 +21,10 @@ repositories:
     type: git
     url: git@github.com:tier4/jpntaxi_description.iv.git
     version: ros2
+  description/vehicle/lexus_description:
+    type: git
+    url: git@github.com:tier4/lexus_description.iv.universe.git
+    version: ros2
   # simulator
   simulator/planning_simulator:
     type: git

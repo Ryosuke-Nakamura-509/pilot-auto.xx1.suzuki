@@ -1,9 +1,9 @@
 repositories:
   # autoware
-  autoware/AutowareArchitectureProposal.iv:
+  autoware/autoware.iv:
     type: git
-    url: https://github.com/tier4/AutowareArchitectureProposal.iv.git
-    version: ros2
+    url: git@github.com:tier4/autoware.iv.git
+    version: main
   autoware/launcher:
     type: git
     url: git@github.com:tier4/autoware_launcher.jpntaxi.git

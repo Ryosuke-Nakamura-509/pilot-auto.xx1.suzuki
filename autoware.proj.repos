@@ -7,7 +7,7 @@ repositories:
   autoware/launcher:
     type: git
     url: git@github.com:tier4/autoware_launcher.jpntaxi.git
-    version: ros2
+    version: main
   autoware/individual_params:
     type: git
     url: https://github.com/tier4/autoware_individual_params.git

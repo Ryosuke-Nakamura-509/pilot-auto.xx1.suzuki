@@ -15,8 +15,8 @@ repositories:
   # description
   description/sensor/sensor_description:
     type: git
-    url: https://github.com/tier4/sensor_description.iv.universe.git
-    version: ros2
+    url: git@github.com:tier4/sensor_description.iv.git
+    version: main
   description/sensor/velodyne_simulator:
     type: git
     url: https://github.com/tier4/velodyne_simulator.git
@@ -27,22 +27,34 @@ repositories:
     version: ros2
   description/vehicle/lexus_description:
     type: git
-    url: git@github.com:tier4/lexus_description.iv.universe.git
-    version: ros2
+    url: git@github.com:tier4/lexus_description.iv.git
+    version: main
   # simulator
   simulator/planning_simulator:
     type: git
-    url: https://github.com/tier4/planning_simulator.iv.universe.git
-    version: ros2
+    url: git@github.com:tier4/planning_simulator.git
+    version: main
   simulator/planning_simulator_launcher:
     type: git
-    url: https://github.com/tier4/planning_sim_launcher.iv.universe.git
-    version: ros2
+    url: git@github.com:tier4/planning_sim_launcher.git
+    version: main
   simulator/scenario_runner:
     type: git
-    url: https://github.com/tier4/scenario_runner.iv.universe.git
+    url: git@github.com:tier4/scenario_simulator_v1.git
+    version: main
+  simulator/scenario_simulator:
+    type: git
+    url: git@github.com:tier4/scenario_simulator.auto.git
+    version: master
+  simulator/logsim:
+    type: git
+    url: git@github.com:tier4/logsim.git
     version: ros2
   # vendor
+  vendor/quaternion_operation:
+    type: git
+    url: https://github.com/OUXT-Polaris/quaternion_operation.git
+    version: f08cd28b357f9feede55f1fb485cb21964f5d594
   vendor/grid_map:
     type: git
     url: https://github.com/ANYbotics/grid_map.git
@@ -81,8 +93,8 @@ repositories:
     version: tier4/ros2
   vendor/livox-driver:
     type: git
-    url: https://github.com/Livox-SDK/livox_ros2_driver.git
-    version: master
+    url: https://github.com/tier4/livox_ros2_driver.git
+    version: tier4/master
   vendor/rosbridge_suite:
     type: git
     url: https://github.com/tier4/rosbridge_suite.git
@@ -107,8 +119,10 @@ repositories:
     type: git
     url: git@github.com:tier4/FieldOperatorApplication.git
     version: ros2
-
-  # calibration
+  vendor/operational-design-domains:
+    type: git
+    url: https://gitlab.com/autowarefoundation/operational-design-domains
+# calibration
 #  calibration/tunable_static_tf_broadcaster:
 #    type: git
 #    url: https://github.com/tier4/tunable_static_tf_broadcaster.git

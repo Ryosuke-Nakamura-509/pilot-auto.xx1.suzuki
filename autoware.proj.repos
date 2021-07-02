@@ -8,9 +8,21 @@ repositories:
     type: git
     url: git@github.com:tier4/autoware_launcher.jpntaxi.git
     version: main
+  autoware/msgs/autoware_api_msgs:
+    type: git
+    url: git@github.com:tier4/autoware_api_msgs.git
+    version: main
+  autoware/msgs/autoware_iv_msgs:
+    type: git
+    url: git@github.com:tier4/autoware_iv_msgs.git
+    version: main
   autoware/individual_params:
     type: git
     url: git@github.com:tier4/autoware_individual_params.jpntaxi.git
+    version: main
+  autoware/calibration_tools:
+    type: git
+    url: git@github.com:tier4/calibration_tools.git
     version: main
   # description
   description/sensor/sensor_description:
@@ -107,10 +119,6 @@ repositories:
     type: git
     url: https://github.com/GT-RAIL/rosauth.git
     version: ros2
-  vendor/clock_publisher:
-    type: git
-    url: https://github.com/mitsudome-r/clock_publisher.git
-    version: master
   vendor/velodyne_vls:
     type: git
     url: https://github.com/tier4/velodyne_vls.git
@@ -143,13 +151,12 @@ repositories:
     type: git
     url: https://github.com/tier4/muSSP.git
     version: tier4/main
+  vendor/pointcloud_to_laserscan:
+    type: git
+    url: https://github.com/tier4/pointcloud_to_laserscan.git
+    version: tier4/main
   # ecu_system_setup
   ecu_system_setup:
     type: git
     url: git@github.com:tier4/autoware_ecu_system_setup.git
     version: main
-# calibration
-#  calibration/tunable_static_tf_broadcaster:
-#    type: git
-#    url: https://github.com/tier4/tunable_static_tf_broadcaster.git
-#    version: ros2

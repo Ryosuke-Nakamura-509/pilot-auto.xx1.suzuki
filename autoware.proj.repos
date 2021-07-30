@@ -3,19 +3,19 @@ repositories:
   autoware/autoware.iv:
     type: git
     url: git@github.com:tier4/autoware.iv.git
-    version: main
+    version: develop
   autoware/launcher:
     type: git
     url: git@github.com:tier4/autoware_launcher.jpntaxi.git
-    version: main
+    version: develop/ros2
   autoware/msgs/autoware_api_msgs:
     type: git
     url: git@github.com:tier4/autoware_api_msgs.git
-    version: main
+    version: develop
   autoware/msgs/autoware_iv_msgs:
     type: git
     url: git@github.com:tier4/autoware_iv_msgs.git
-    version: main
+    version: develop
   autoware/individual_params:
     type: git
     url: git@github.com:tier4/autoware_individual_params.jpntaxi.git
@@ -148,6 +148,11 @@ repositories:
     type: git
     url: https://github.com/tier4/pointcloud_to_laserscan.git
     version: tier4/main
+  # TODO: Remove behavior tree from repos after runtime error is resolved in released package
+  vendor/behaviortree-cpp-v3:
+    type: git
+    url: https://github.com/BehaviorTree/BehaviorTree.CPP.git
+    version: 3.5.6
   # missing_packages
   missing_packages/lanelet2:
     type: git

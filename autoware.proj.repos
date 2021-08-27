@@ -6,8 +6,8 @@ repositories:
     version: develop
   autoware/launcher:
     type: git
-    url: git@github.com:tier4/autoware_launcher.git
-    version: develop
+    url: git@github.com:tier4/autoware_launcher.jpntaxi.git
+    version: develop/ros2
   autoware/autoware_api_adaptor:
     type: git
     url: git@github.com:tier4/autoware_api_adaptor.git
@@ -22,7 +22,7 @@ repositories:
     version: develop
   autoware/individual_params:
     type: git
-    url: https://github.com/tier4/autoware_individual_params.git
+    url: git@github.com:tier4/autoware_individual_params.jpntaxi.git
     version: main
   autoware/calibration_tools:
     type: git
@@ -41,6 +41,10 @@ repositories:
     type: git
     url: https://github.com/tier4/velodyne_simulator.git
     version: ros2
+  description/vehicle/jpntaxi_description:
+    type: git
+    url: git@github.com:tier4/jpntaxi_description.iv.git
+    version: main
   description/vehicle/lexus_description:
     type: git
     url: git@github.com:tier4/lexus_description.iv.git
@@ -132,6 +136,10 @@ repositories:
     type: git
     url: https://github.com/tier4/rqt_runtime_monitor.git
     version: dashing-devel
+  vendor/foa:
+    type: git
+    url: git@github.com:tier4/FieldOperatorApplication.git
+    version: develop
   vendor/operational-design-domains:
     type: git
     url: https://gitlab.com/autowarefoundation/operational-design-domains

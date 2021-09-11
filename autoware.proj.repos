@@ -64,7 +64,7 @@ repositories:
     version: main
   simulator/scenario_simulator:
     type: git
-    url: git@github.com:tier4/scenario_simulator.auto.git
+    url: git@github.com:tier4/scenario_simulator_v2.git
     version: master
   simulator/logsim:
     type: git
@@ -160,6 +160,10 @@ repositories:
     type: git
     url: https://github.com/tier4/ars408_driver.git
     version: tier4/ros2
+  vendor/hash_library_vendor:
+    type: git
+    url: https://github.com/tier4/hash_library_vendor.git
+    version: main
   # TODO: Remove behavior tree from repos after runtime error is resolved in released package
   vendor/behaviortree-cpp-v3:
     type: git

@@ -16,7 +16,7 @@ jobs:
       fail-fast: false
       matrix:
         rc_branch:
-          - rc/v1.0.0 # TODO(maintainer): Edit here in each fork repository
+          - rc/v0.21.1.0
 
     steps:
       - name: Set BASE_BRANCH

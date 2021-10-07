@@ -11,11 +11,11 @@ repositories:
   autoware/autoware_api_adaptor:
     type: git
     url: git@github.com:tier4/autoware_api_adaptor.git
-    version: fbedcfc24f4a954244ae6a5bb1dd3be1c083ad2b
+    version: 9d4ca406ce75de9ab97255d1d7146d025e834aa7
   autoware/msgs/autoware_api_msgs:
     type: git
     url: git@github.com:tier4/autoware_api_msgs.git
-    version: e61cc474e0f848bd9117e9a5fc0700487319462e
+    version: 45be19b34c8a0e98fc47a430f483f7e19db252a3
   autoware/msgs/autoware_iv_msgs:
     type: git
     url: git@github.com:tier4/autoware_iv_msgs.git
@@ -140,7 +140,7 @@ repositories:
   vendor/foa:
     type: git
     url: git@github.com:tier4/FieldOperatorApplication.git
-    version: da6265a43c042ca2caa37f1c1b824a7f79a1acd0
+    version: 844e42bdc5039b3eb420ce869284f350d09bf47e
   vendor/operational-design-domains:
     type: git
     url: https://gitlab.com/autowarefoundation/operational-design-domains

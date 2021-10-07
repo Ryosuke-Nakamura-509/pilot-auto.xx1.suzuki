@@ -3,7 +3,7 @@ repositories:
   autoware/autoware.iv:
     type: git
     url: git@github.com:tier4/autoware.iv.git
-    version: dcadacff1e9b3f24b643ce858f2550e270f8640c
+    version: 1fd2d23f7879e410cbbd53fe54b4c16f170a5633
   autoware/launcher:
     type: git
     url: git@github.com:tier4/autoware_launcher.jpntaxi.git

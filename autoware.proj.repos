@@ -23,7 +23,7 @@ repositories:
   autoware/individual_params:
     type: git
     url: git@github.com:tier4/autoware_individual_params.jpntaxi.git
-    version: 2b3cb25a12da641fb88696649a20bd47f34187a3
+    version: 3b75149bbcbc502b3fe672a2c640570d84037cfb
   autoware/calibration_tools:
     type: git
     url: git@github.com:tier4/calibration_tools.git

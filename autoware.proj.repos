@@ -2,24 +2,32 @@ repositories:
   # autoware
   autoware/autoware.iv:
     type: git
-    url: git@github.com:tier4/autoware.iv.git
-    version: 6db344e54f7fd1c0e70fe362f884475c2b99911c
+    url: git@github.com:tier4/AutowareArchitectureProposal.iv
+    version: use-autoware-auto-msgs
   autoware/launcher:
     type: git
     url: git@github.com:tier4/autoware_launcher.jpntaxi.git
-    version: db938a7d00b153434c90ab7e6f52fb40949c68b3
+    version: use-autoware-auto-msgs
+  autoware/aip_launcher:
+    type: git
+    url: git@github.com:tier4/aip_launcher.iv.git
+    version: 539ab421cd988ce9126ac3fb625914d9fd429445
   autoware/autoware_api_adaptor:
     type: git
     url: git@github.com:tier4/autoware_api_adaptor.git
-    version: 9d4ca406ce75de9ab97255d1d7146d025e834aa7
+    version: use-autoware-auto-msgs
   autoware/msgs/autoware_api_msgs:
     type: git
     url: git@github.com:tier4/autoware_api_msgs.git
-    version: 45be19b34c8a0e98fc47a430f483f7e19db252a3
+    version: 9d683fd2d47c2664fd1dcb8dd93cffe696535a43
   autoware/msgs/autoware_iv_msgs:
     type: git
     url: git@github.com:tier4/autoware_iv_msgs.git
-    version: bbbf06370965b29f37b1b6141214638bb723f4a1
+    version: use-autoware-auto-msgs
+  autoware/msgs/autoware_auto_msgs:
+    type: git
+    url: git@github.com:tier4/autoware_auto_msgs.git
+    version: tier4/main
   autoware/individual_params:
     type: git
     url: git@github.com:tier4/autoware_individual_params.jpntaxi.git
@@ -27,16 +35,16 @@ repositories:
   autoware/calibration_tools:
     type: git
     url: git@github.com:tier4/calibration_tools.git
-    version: c747ac39178aad6b19b77e2c09f0a50556c70f7b
+    version: e8651a36963f117fabf9cf2bdf68f9ad1d3df98e
   # description
-  description/sensor/sensor_description:
+  description/sensor/sensor_component_description:
     type: git
     url: https://github.com/tier4/sensor_description.iv.git
     version: ca3db56426c80f579a79c2c310c2ef59e93e76c2
   description/sensor/aip_description:
     type: git
     url: https://github.com/tier4/aip_description.iv.git
-    version: b8e08537bf8727218ebf639b5b49842f1ca520bf
+    version: 094dce484cea799fbf6f95f00da708cfbc1d1f21
   description/sensor/velodyne_simulator:
     type: git
     url: https://github.com/tier4/velodyne_simulator.git
@@ -61,20 +69,20 @@ repositories:
   simulator/scenario_runner:
     type: git
     url: git@github.com:tier4/scenario_simulator_v1.git
-    version: c9dabc751ea86be351268d0d396bf7a8dcf77633
+    version: 1eef79449f7670d0c2a11ba821f48ce8ed0960e7
   simulator/scenario_simulator:
     type: git
     url: https://github.com/tier4/scenario_simulator_v2.git
-    version: e46ee04362856844c5f1a98f4874d6246b318f1d
+    version: 94ed2861739d01490e2fe7c8ec27be76ee72e0eb
   simulator/logsim:
     type: git
     url: git@github.com:tier4/logsim.git
-    version: 53144d2f979961b3c0fb0b1583645c2954bf4560
+    version: 83901be3b7f70f3580aff610103ab90d2f002782
   # ecu_system_setup
   ecu_system_setup:
     type: git
     url: git@github.com:tier4/autoware_ecu_system_setup.git
-    version: 5866f0ec7bd06847ad85a6af7b67caa22c6cff48
+    version: 6baceddfce1e4c2420b44c3c6a31f1054ca3d6c9
   # vendor
   vendor/quaternion_operation:
     type: git
@@ -121,10 +129,14 @@ repositories:
     type: git
     url: https://github.com/tier4/livox_ros2_driver.git
     version: ef18bb868d92db70b541c21d188961ee6bcac024
+  vendor/lidar-driver:
+    type: git
+    url: git@github.com:tier4/lidar_driver.git
+    version: v0.1.4
   vendor/rosbridge_suite:
     type: git
     url: https://github.com/tier4/rosbridge_suite.git
-    version: 730b945d70c1ab428899330559715dcfa0ff5c17
+    version: 2b2a07d1c444e7c886e03264b10ec503890f2dba
   vendor/rosauth:
     type: git
     url: https://github.com/GT-RAIL/rosauth.git
@@ -148,7 +160,7 @@ repositories:
   vendor/ndt_omp:
     type: git
     url: https://github.com/tier4/ndt_omp.git
-    version: 50ebc3763953056c408161e872abf4c4f8152c5d
+    version: 84d313e98f70033f37a664003f90ef90813cb665
   vendor/mussp:
     type: git
     url: https://github.com/tier4/muSSP.git
@@ -165,6 +177,10 @@ repositories:
     type: git
     url: https://github.com/tier4/hash_library_vendor.git
     version: fd300d33ac8f4dcc5e2c6d4f0415df5062660f23
+  vendor/diagnostics:
+    type: git
+    url: https://github.com/tier4/diagnostics.git
+    version: da6cdbe674dd7bf1e71ee6fb73825e3e43644f0c
   # TODO: Remove behavior tree from repos after runtime error is resolved in released package
   vendor/behaviortree-cpp-v3:
     type: git
@@ -188,7 +204,3 @@ repositories:
     type: git
     url: https://github.com/astuff/astuff_sensor_msgs.git
     version: fb1f3a6dcf2d41ed61611b87286e67f9f1b79624
-  missing_packages/automotive_autonomy_msgs:
-    type: git
-    url: https://github.com/astuff/automotive_autonomy_msgs.git
-    version: 40fdb58a8aaddf2866f4ddd3da71dfd8e3a491ad

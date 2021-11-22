@@ -2,7 +2,7 @@ repositories:
   # autoware
   autoware/autoware.iv:
     type: git
-    url: git@github.com:tier4/AutowareArchitectureProposal.iv
+    url: https://github.com/tier4/AutowareArchitectureProposal.iv
     version: use-autoware-auto-msgs
   autoware/launcher:
     type: git
@@ -10,23 +10,23 @@ repositories:
     version: use-autoware-auto-msgs
   autoware/aip_launcher:
     type: git
-    url: git@github.com:tier4/aip_launcher.iv.git
-    version: 539ab421cd988ce9126ac3fb625914d9fd429445
+    url: https://github.com/tier4/AutowareArchitectureProposal_aip_launcher.git
+    version: use-autoware-auto-msgs
   autoware/autoware_api_adaptor:
     type: git
-    url: git@github.com:tier4/autoware_api_adaptor.git
+    url: https://github.com/tier4/AutowareArchitectureProposal_api_adaptor.git
     version: use-autoware-auto-msgs
   autoware/msgs/autoware_api_msgs:
     type: git
-    url: git@github.com:tier4/autoware_api_msgs.git
+    url: https://github.com/tier4/AutowareArchitectureProposal_api_msgs.git
     version: 9d683fd2d47c2664fd1dcb8dd93cffe696535a43
   autoware/msgs/autoware_iv_msgs:
     type: git
-    url: git@github.com:tier4/autoware_iv_msgs.git
+    url: https://github.com/tier4/AutowareArchitectureProposal_msgs.git
     version: use-autoware-auto-msgs
   autoware/msgs/autoware_auto_msgs:
     type: git
-    url: git@github.com:tier4/autoware_auto_msgs.git
+    url: https://github.com/tier4/autoware_auto_msgs.git
     version: tier4/main
   autoware/individual_params:
     type: git
@@ -58,18 +58,6 @@ repositories:
     url: https://github.com/tier4/lexus_description.iv.git
     version: 4a3a06e297f85a737d2b5879b508843b2998038a
   # simulator
-  simulator/planning_simulator:
-    type: git
-    url: git@github.com:tier4/planning_simulator.git
-    version: 512aaa59a16231b6a3d5cfe17ec2e54094c99be9
-  simulator/planning_simulator_launcher:
-    type: git
-    url: git@github.com:tier4/planning_sim_launcher.git
-    version: 8db18efcafa3a7647d0958454177f242d3dcb70e
-  simulator/scenario_runner:
-    type: git
-    url: git@github.com:tier4/scenario_simulator_v1.git
-    version: 1eef79449f7670d0c2a11ba821f48ce8ed0960e7
   simulator/scenario_simulator:
     type: git
     url: https://github.com/tier4/scenario_simulator_v2.git
@@ -137,10 +125,6 @@ repositories:
     type: git
     url: https://github.com/tier4/velodyne_vls.git
     version: use-autoware-auto-msgs
-  vendor/rqt_runtime_monitor:
-    type: git
-    url: https://github.com/tier4/rqt_runtime_monitor.git
-    version: e76c9846da6a8728d03e80b8b01dca61c4e4d99d
   vendor/foa:
     type: git
     url: git@github.com:tier4/FieldOperatorApplication.git
@@ -191,8 +175,3 @@ repositories:
     type: git
     url: https://github.com/ros/robot_state_publisher.git
     version: 51c5f53baa19232e6f99e2638619a9faa6697d78
-  # missing_packages
-  missing_packages/astuff_sensor_msgs:
-    type: git
-    url: https://github.com/astuff/astuff_sensor_msgs.git
-    version: fb1f3a6dcf2d41ed61611b87286e67f9f1b79624

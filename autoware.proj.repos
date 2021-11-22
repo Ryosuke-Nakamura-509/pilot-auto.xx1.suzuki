@@ -52,7 +52,7 @@ repositories:
   description/vehicle/jpntaxi_description:
     type: git
     url: git@github.com:tier4/jpntaxi_description.iv.git
-    version: d5cd10c06918aee8e23f4db332a3eed20b103dcf
+    version: use-autoware-auto-msgs
   description/vehicle/lexus_description:
     type: git
     url: https://github.com/tier4/lexus_description.iv.git

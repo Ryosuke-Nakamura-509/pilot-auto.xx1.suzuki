@@ -128,7 +128,7 @@ repositories:
   vendor/foa:
     type: git
     url: git@github.com:tier4/FieldOperatorApplication.git
-    version: 844e42bdc5039b3eb420ce869284f350d09bf47e
+    version: use-autoware-auto-msgs
   vendor/operational-design-domains:
     type: git
     url: https://gitlab.com/autowarefoundation/operational-design-domains

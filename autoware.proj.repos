@@ -1,9 +1,13 @@
 repositories:
   # autoware
-  autoware/autoware.iv:
+  autoware/universe:
     type: git
-    url: https://github.com/tier4/AutowareArchitectureProposal.iv
-    version: use-autoware-auto-msgs
+    url: https://github.com/autowarefoundation/autoware.universe.git
+    version: tier4/proposal
+  autoware/common:
+    type: git
+    url: https://github.com/autowarefoundation/autoware_common.git
+    version: tier4/proposal
   autoware/launcher:
     type: git
     url: git@github.com:tier4/autoware_launcher.jpntaxi.git
@@ -12,19 +16,15 @@ repositories:
     type: git
     url: https://github.com/tier4/AutowareArchitectureProposal_aip_launcher.git
     version: use-autoware-auto-msgs
-  autoware/autoware_api_adaptor:
+  autoware/api_adaptor:
     type: git
     url: https://github.com/tier4/AutowareArchitectureProposal_api_adaptor.git
-    version: use-autoware-auto-msgs
-  autoware/msgs/autoware_api_msgs:
+    version: tier4/universe
+  autoware/api_msgs:
     type: git
     url: https://github.com/tier4/AutowareArchitectureProposal_api_msgs.git
-    version: 9d683fd2d47c2664fd1dcb8dd93cffe696535a43
-  autoware/msgs/autoware_iv_msgs:
-    type: git
-    url: https://github.com/tier4/AutowareArchitectureProposal_msgs.git
     version: use-autoware-auto-msgs
-  autoware/msgs/autoware_auto_msgs:
+  autoware/auto_msgs:
     type: git
     url: https://github.com/tier4/autoware_auto_msgs.git
     version: tier4/main
@@ -35,7 +35,7 @@ repositories:
   autoware/calibration_tools:
     type: git
     url: git@github.com:tier4/calibration_tools.git
-    version: use-autoware-auto-msgs
+    version: tier4/universe
   # description
   description/sensor/sensor_component_description:
     type: git
@@ -56,16 +56,20 @@ repositories:
   description/vehicle/lexus_description:
     type: git
     url: https://github.com/tier4/lexus_description.iv.git
-    version: 4a3a06e297f85a737d2b5879b508843b2998038a
+    version: use-autoware-auto-msgs
   # simulator
   simulator/scenario_simulator:
     type: git
     url: https://github.com/tier4/scenario_simulator_v2.git
-    version: 94ed2861739d01490e2fe7c8ec27be76ee72e0eb
+    version: use-autoware-auto-msgs
   simulator/logsim:
     type: git
     url: git@github.com:tier4/logsim.git
-    version: 83901be3b7f70f3580aff610103ab90d2f002782
+    version: main
+  simulator/awml_evaluation:
+    type: git
+    url: git@github.com:tier4/AWMLevaluation.git
+    version: main
   # ecu_system_setup
   ecu_system_setup:
     type: git
@@ -148,7 +152,7 @@ repositories:
   vendor/ars408_driver:
     type: git
     url: https://github.com/tier4/ars408_driver.git
-    version: d8f391ab6f9b6241dd76c9845adf6a8c92c34d9d
+    version: use-autoware-auto-msgs
   vendor/hash_library_vendor:
     type: git
     url: https://github.com/tier4/hash_library_vendor.git

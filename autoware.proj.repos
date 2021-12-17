@@ -11,7 +11,7 @@ repositories:
   autoware/launcher:
     type: git
     url: git@github.com:tier4/autoware_launcher.jpntaxi.git
-    version: use-autoware-auto-msgs
+    version: tier4/proposal
   autoware/aip_launcher:
     type: git
     url: https://github.com/tier4/AutowareArchitectureProposal_aip_launcher.git
@@ -61,7 +61,7 @@ repositories:
   simulator/scenario_simulator:
     type: git
     url: https://github.com/tier4/scenario_simulator_v2.git
-    version: use-autoware-auto-msgs
+    version: master
   simulator/logsim:
     type: git
     url: git@github.com:tier4/logsim.git

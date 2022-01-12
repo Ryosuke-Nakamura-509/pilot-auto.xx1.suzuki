@@ -3,39 +3,39 @@ repositories:
   autoware/universe:
     type: git
     url: https://github.com/tier4/autoware.universe.git
-    version: tier4/main
+    version: beta/v0.1.0
   autoware/common:
     type: git
     url: https://github.com/autowarefoundation/autoware_common.git
-    version: tier4/proposal
+    version: 0fee8c46ac1d94d782f3bd26360b4fe1f5b9b6cc
   autoware/launcher:
     type: git
     url: git@github.com:tier4/autoware_launcher.jpntaxi.git
-    version: tier4/universe
+    version: beta/v0.30.0
   autoware/aip_launcher:
     type: git
     url: https://github.com/tier4/AutowareArchitectureProposal_aip_launcher.git
-    version: use-autoware-auto-msgs
+    version: f0d0bb5d4129b89ef69adbb7b086e444635e70c0
   autoware/api_adaptor:
     type: git
     url: https://github.com/tier4/AutowareArchitectureProposal_api_adaptor.git
-    version: tier4/universe
+    version: c5ba9b9d42f161e3564da735558913838a8c4bff
   autoware/tier4_msgs:
     type: git
     url: https://github.com/tier4/AutowareArchitectureProposal_msgs.git
-    version: tier4/universe
+    version: fe73f185786767c1b25ba2dc270595d6cdfcc5e6
   autoware/auto_msgs:
     type: git
     url: https://github.com/tier4/autoware_auto_msgs.git
-    version: tier4/main
+    version: f07518d7b3aedd0be81487261dd51ed366e5d3f4
   autoware/individual_params:
     type: git
     url: git@github.com:tier4/autoware_individual_params.jpntaxi.git
-    version: use-autoware-auto-msgs
+    version: bbc34d9185eefe5410eb2822c3fbb6c43e944109
   autoware/calibration_tools:
     type: git
     url: git@github.com:tier4/calibration_tools.git
-    version: tier4/universe
+    version: fe6ce9ec8799a0b51274d5b138c1136d7e8f3eca
   # description
   description/sensor/sensor_component_description:
     type: git
@@ -52,28 +52,28 @@ repositories:
   description/vehicle/jpntaxi_description:
     type: git
     url: git@github.com:tier4/jpntaxi_description.iv.git
-    version: tier4/universe
+    version: 8be2212f9a050467935a283aa98e1b5fbf3b51a9
   description/vehicle/lexus_description:
     type: git
     url: https://github.com/tier4/lexus_description.iv.git
-    version: tier4/universe
+    version: b7c687130f7fb9ef9a1cbdbd9289a9e05d6c01fa
   # simulator
   simulator/scenario_simulator:
     type: git
     url: https://github.com/tier4/scenario_simulator_v2.git
-    version: master
+    version: d029534b3cea0cdb3b3d69a8dc63753ad00f52e5
   simulator/AutowareArchitectureProposal_msgs: # for scenario_simulator_v2 backward compatibility.
     type: git
     url: https://github.com/tier4/AutowareArchitectureProposal_msgs.git
-    version: main
+    version: 4d3f1ac0eddefecd5f36a868996b36b8dabde512
   simulator/logsim:
     type: git
     url: git@github.com:tier4/logsim.git
-    version: main
+    version: 29a046e9c5115a1b67e68bb81a0f48c1b652a9bc
   simulator/awml_evaluation:
     type: git
     url: git@github.com:tier4/AWMLevaluation.git
-    version: main
+    version: v1.2.0
   # ecu_system_setup
   ecu_system_setup:
     type: git
@@ -92,7 +92,7 @@ repositories:
   vendor/perception_pcl:
     type: git
     url: https://github.com/ros-perception/perception_pcl.git
-    version: adff50fe9b6adf4770c75275252707de798c4ea6
+    version: 2.2.1
   vendor/topic_tools:
     type: git
     url: https://github.com/tier4/topic_tools.git
@@ -132,11 +132,11 @@ repositories:
   vendor/velodyne_vls:
     type: git
     url: https://github.com/tier4/velodyne_vls.git
-    version: use-autoware-auto-msgs
+    version: d58b78436d2e2bd4f7421974d3e72b1498e577ea
   vendor/foa:
     type: git
     url: git@github.com:tier4/FieldOperatorApplication.git
-    version: tier4/universe
+    version: 3754790b51af02577a7dea12ad02ff5bd31d6e65
   vendor/operational-design-domains:
     type: git
     url: https://gitlab.com/autowarefoundation/operational-design-domains
@@ -156,7 +156,7 @@ repositories:
   vendor/ars408_driver:
     type: git
     url: https://github.com/tier4/ars408_driver.git
-    version: use-autoware-auto-msgs
+    version: 8999f6dfdc17c251f69614360001098307c43cf0
   vendor/diagnostics:
     type: git
     url: https://github.com/tier4/diagnostics.git

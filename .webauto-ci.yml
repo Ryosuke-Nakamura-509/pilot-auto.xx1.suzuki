@@ -24,7 +24,7 @@ simulations:
         vehicle_model: lexus
         sensor_model: aip_xx1
         autoware_launch_package: scenario_test_runner
-        autoware_launch_file: planning_simulator.launch.xml
+        autoware_launch_file: autoware.launch.xml
         architecture_type: awf/universe
         initialize_duration: "45"
 

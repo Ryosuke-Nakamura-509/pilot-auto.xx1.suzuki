@@ -3,7 +3,7 @@ repositories:
   autoware/universe:
     type: git
     url: https://github.com/tier4/autoware.universe.git
-    version: beta/v0.1.0
+    version: beta/v0.1.1
   autoware/common:
     type: git
     url: https://github.com/autowarefoundation/autoware_common.git
@@ -11,7 +11,7 @@ repositories:
   autoware/launcher:
     type: git
     url: git@github.com:tier4/autoware_launcher.jpntaxi.git
-    version: beta/v0.30.0
+    version: beta/v0.30.0.0
   autoware/aip_launcher:
     type: git
     url: https://github.com/tier4/AutowareArchitectureProposal_aip_launcher.git
@@ -31,7 +31,7 @@ repositories:
   autoware/individual_params:
     type: git
     url: git@github.com:tier4/autoware_individual_params.jpntaxi.git
-    version: bbc34d9185eefe5410eb2822c3fbb6c43e944109
+    version: use-autoware-auto-msgs9
   autoware/calibration_tools:
     type: git
     url: git@github.com:tier4/calibration_tools.git
@@ -136,7 +136,7 @@ repositories:
   vendor/foa:
     type: git
     url: git@github.com:tier4/FieldOperatorApplication.git
-    version: 3754790b51af02577a7dea12ad02ff5bd31d6e65
+    version: rc/v2.1.0
   vendor/operational-design-domains:
     type: git
     url: https://gitlab.com/autowarefoundation/operational-design-domains
@@ -144,7 +144,7 @@ repositories:
   vendor/ndt_omp:
     type: git
     url: https://github.com/tier4/ndt_omp.git
-    version: 84d313e98f70033f37a664003f90ef90813cb665
+    version: b9b717010e9a70110075cdbf2bf3deb19873c04f
   vendor/mussp:
     type: git
     url: https://github.com/tier4/muSSP.git

@@ -61,7 +61,7 @@ repositories:
   simulator/scenario_simulator:
     type: git
     url: https://github.com/tier4/scenario_simulator_v2.git
-    version: d029534b3cea0cdb3b3d69a8dc63753ad00f52e5
+    version: ec401f2eeff2db466169dcf8e286eb5dce11d003
   simulator/AutowareArchitectureProposal_msgs: # for scenario_simulator_v2 backward compatibility.
     type: git
     url: https://github.com/tier4/AutowareArchitectureProposal_msgs.git

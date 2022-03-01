@@ -3,7 +3,7 @@ repositories:
   autoware/universe:
     type: git
     url: https://github.com/tier4/autoware.universe.git
-    version: 3c8ee6f6b153dc8ed6a2346ce28635570bbfb4a6
+    version: beta/v0.1.1
   autoware/common:
     type: git
     url: https://github.com/autowarefoundation/autoware_common.git
@@ -11,19 +11,19 @@ repositories:
   autoware/launcher:
     type: git
     url: git@github.com:tier4/autoware_launcher.jpntaxi.git
-    version: 63c0acac12bbd3db5d7e64d15914db04b93b4a6d
+    version: beta/v0.30.0.0
   autoware/aip_launcher:
     type: git
-    url: https://github.com/tier4/aip_launcher.git
+    url: https://github.com/tier4/AutowareArchitectureProposal_aip_launcher.git
     version: tier4/universe
-  autoware/ad_api_adaptor:
+  autoware/api_adaptor:
     type: git
-    url: https://github.com/tier4/tier4_ad_api_adaptor.git
-    version: tier4/universe
-  autoware/tier4_autoware_msgs:
+    url: https://github.com/tier4/AutowareArchitectureProposal_api_adaptor.git
+    version: c5ba9b9d42f161e3564da735558913838a8c4bff
+  autoware/tier4_msgs:
     type: git
-    url: https://github.com/tier4/tier4_autoware_msgs.git
-    version: tier4/universe
+    url: https://github.com/tier4/AutowareArchitectureProposal_msgs.git
+    version: fe73f185786767c1b25ba2dc270595d6cdfcc5e6
   autoware/auto_msgs:
     type: git
     url: https://github.com/tier4/autoware_auto_msgs.git
@@ -45,6 +45,10 @@ repositories:
     type: git
     url: https://github.com/tier4/aip_description.iv.git
     version: 094dce484cea799fbf6f95f00da708cfbc1d1f21
+  description/sensor/velodyne_simulator:
+    type: git
+    url: https://github.com/tier4/velodyne_simulator.git
+    version: 7bca7039a1d9b0a37a268e7ced3e97b96fe9f5ee
   description/vehicle/jpntaxi_description:
     type: git
     url: git@github.com:tier4/jpntaxi_description.iv.git
@@ -57,11 +61,11 @@ repositories:
   simulator/scenario_simulator:
     type: git
     url: https://github.com/tier4/scenario_simulator_v2.git
-    version: master
-  simulator/tier4_autoware_msgs: # for scenario_simulator_v2 backward compatibility.
+    version: ec401f2eeff2db466169dcf8e286eb5dce11d003
+  simulator/AutowareArchitectureProposal_msgs: # for scenario_simulator_v2 backward compatibility.
     type: git
-    url: https://github.com/tier4/tier4_autoware_msgs.git
-    version: main
+    url: https://github.com/tier4/AutowareArchitectureProposal_msgs.git
+    version: 4d3f1ac0eddefecd5f36a868996b36b8dabde512
   simulator/logsim:
     type: git
     url: git@github.com:tier4/logsim.git
@@ -69,16 +73,12 @@ repositories:
   simulator/awml_evaluation:
     type: git
     url: git@github.com:tier4/AWMLevaluation.git
-    version: main
-  simulator/ndt_convergence_evaluation:
-    type: git
-    url: git@github.com:tier4/ndt_convergence_evaluation.git
-    version: feature/standalone
+    version: v1.2.0
   # ecu_system_setup
   ecu_system_setup:
     type: git
     url: git@github.com:tier4/autoware_ecu_system_setup.git
-    version: main
+    version: 6baceddfce1e4c2420b44c3c6a31f1054ca3d6c9
   # vendor
   vendor/quaternion_operation:
     type: git
@@ -89,6 +89,10 @@ repositories:
     type: git
     url: https://github.com/tier4/grid_map.git
     version: 657cc055eb90a042057738a85a5651c03e42b1bb
+  vendor/perception_pcl:
+    type: git
+    url: https://github.com/ros-perception/perception_pcl.git
+    version: 2.2.1
   vendor/topic_tools:
     type: git
     url: https://github.com/tier4/topic_tools.git
@@ -100,7 +104,7 @@ repositories:
   vendor/tamagawa_imu_driver:
     type: git
     url: https://github.com/tier4/tamagawa_imu_driver.git
-    version: fd169e3b9f14adde42fc2ed7e437af80e68261ef
+    version: 07462f25dd047178f7807eae8267e168369a95d6
   vendor/ublox:
     type: git
     url: https://github.com/tier4/ublox.git
@@ -132,7 +136,7 @@ repositories:
   vendor/foa:
     type: git
     url: git@github.com:tier4/FieldOperatorApplication.git
-    version: develop
+    version: rc/v2.1.0
   vendor/operational-design-domains:
     type: git
     url: https://gitlab.com/autowarefoundation/operational-design-domains

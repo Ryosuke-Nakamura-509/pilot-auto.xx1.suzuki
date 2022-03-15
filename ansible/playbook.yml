@@ -20,3 +20,4 @@
     - { role: autoware, rosdistro: galactic, tags: ["autoware"] }
     - { role: libtorch, tags: ["libtorch"] }
     - { role: pre-commit, tags: ["pre-commit"] }
+    - { role: foa, tags: ["foa"] }

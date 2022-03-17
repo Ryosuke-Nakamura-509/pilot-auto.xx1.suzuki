@@ -170,3 +170,7 @@ repositories:
     type: git
     url: https://github.com/PlotJuggler/plotjuggler-ros-plugins.git
     version: galactic
+  vendor/kvaser_interface: # temporary: https://github.com/astuff/kvaser_interface/pull/77
+    type: git
+    url: https://github.com/astuff/kvaser_interface
+    version: d7ea2fb82a1b61d0ce4c96d1422599f7ee6ed1b7

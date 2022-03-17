@@ -12,7 +12,7 @@ jobs:
     container: ros:galactic
     steps:
       - name: Check out repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: Install pip for rosdep
         run: |
@@ -20,9 +20,14 @@ jobs:
           sudo apt-get -y install python3-pip
 
       - name: Register AutonomouStuff repository
-        uses: autowarefoundation/autoware-github-actions/register-autonomoustuff-repository@tier4/proposal
+        uses: autowarefoundation/autoware-github-actions/register-autonomoustuff-repository@v1
         with:
           rosdistro: galactic
+
+      - name: Register kvaser repository
+        run: |
+          sudo apt-get -y install software-properties-common
+          sudo apt-add-repository ppa:astuff/kvaser-linux
 
       - name: Set git config for private repositories
         run: |

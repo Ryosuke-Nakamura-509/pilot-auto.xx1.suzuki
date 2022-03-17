@@ -3,15 +3,15 @@ repositories:
   autoware/universe:
     type: git
     url: https://github.com/tier4/autoware.universe.git
-    version: 004f7b555f09d4e24a87e92a806ac18cc4a6b95a
+    version: tier4/main
   autoware/common:
     type: git
     url: https://github.com/autowarefoundation/autoware_common.git
-    version: 0fee8c46ac1d94d782f3bd26360b4fe1f5b9b6cc
+    version: main
   autoware/launcher:
     type: git
     url: git@github.com:tier4/autoware_launcher.jpntaxi.git
-    version: 61a10f35f574645101d5ee0eb0e14da9f8ff1cfe
+    version: tier4/universe
   autoware/aip_launcher:
     type: git
     url: https://github.com/tier4/aip_launcher.git
@@ -27,7 +27,7 @@ repositories:
   autoware/auto_msgs:
     type: git
     url: https://github.com/tier4/autoware_auto_msgs.git
-    version: f07518d7b3aedd0be81487261dd51ed366e5d3f4
+    version: tier4/main
   autoware/individual_params:
     type: git
     url: git@github.com:tier4/autoware_individual_params.jpntaxi.git
@@ -35,7 +35,7 @@ repositories:
   autoware/calibration_tools:
     type: git
     url: git@github.com:tier4/calibration_tools.git
-    version: fe6ce9ec8799a0b51274d5b138c1136d7e8f3eca
+    version: tier4/universe
   # description
   description/sensor/sensor_component_description:
     type: git
@@ -48,11 +48,11 @@ repositories:
   description/vehicle/jpntaxi_description:
     type: git
     url: git@github.com:tier4/jpntaxi_description.iv.git
-    version: 8be2212f9a050467935a283aa98e1b5fbf3b51a9
+    version: tier4/universe
   description/vehicle/lexus_description:
     type: git
     url: https://github.com/tier4/lexus_description.iv.git
-    version: b7c687130f7fb9ef9a1cbdbd9289a9e05d6c01fa
+    version: tier4/universe
   # simulator
   simulator/scenario_simulator:
     type: git
@@ -65,7 +65,7 @@ repositories:
   simulator/logsim:
     type: git
     url: git@github.com:tier4/logsim.git
-    version: 29a046e9c5115a1b67e68bb81a0f48c1b652a9bc
+    version: main
   simulator/awml_evaluation:
     type: git
     url: git@github.com:tier4/AWMLevaluation.git
@@ -80,10 +80,6 @@ repositories:
     url: git@github.com:tier4/autoware_ecu_system_setup.git
     version: main
   # vendor
-  vendor/quaternion_operation:
-    type: git
-    url: https://github.com/OUXT-Polaris/quaternion_operation.git
-    version: f08cd28b357f9feede55f1fb485cb21964f5d594
   # After https://github.com/ANYbotics/grid_map/pull/323 is merged, use upstream.
   vendor/grid_map:
     type: git
@@ -93,6 +89,10 @@ repositories:
     type: git
     url: https://github.com/tier4/topic_tools.git
     version: ac3af3357f009925d29c8979f7613bcf111e58c4
+  vendor/pacmod_interface:
+    type: git
+    url: https://github.com/tier4/pacmod_interface.git
+    version: main
   vendor/usb_cam: # TODO remove after https://github.com/ros-drivers/usb_cam/pull/132 is available in foxy
     type: git
     url: https://github.com/tier4/usb_cam.git
@@ -120,7 +120,7 @@ repositories:
   vendor/rosbridge_suite:
     type: git
     url: https://github.com/tier4/rosbridge_suite.git
-    version: 2b2a07d1c444e7c886e03264b10ec503890f2dba
+    version: 0ee05e529aef88bf2654b77ddd5ccd7b6fe2ee6b
   vendor/rosauth:
     type: git
     url: https://github.com/GT-RAIL/rosauth.git
@@ -128,7 +128,7 @@ repositories:
   vendor/velodyne_vls:
     type: git
     url: https://github.com/tier4/velodyne_vls.git
-    version: d58b78436d2e2bd4f7421974d3e72b1498e577ea
+    version: use-autoware-auto-msgs
   vendor/foa:
     type: git
     url: git@github.com:tier4/FieldOperatorApplication.git
@@ -140,7 +140,7 @@ repositories:
   vendor/ndt_omp:
     type: git
     url: https://github.com/tier4/ndt_omp.git
-    version: 84d313e98f70033f37a664003f90ef90813cb665
+    version: cb8d588912b1503ea4b2660c04b0c70179b678b6
   vendor/mussp:
     type: git
     url: https://github.com/tier4/muSSP.git
@@ -152,7 +152,7 @@ repositories:
   vendor/ars408_driver:
     type: git
     url: https://github.com/tier4/ars408_driver.git
-    version: 8999f6dfdc17c251f69614360001098307c43cf0
+    version: use-autoware-auto-msgs
   vendor/diagnostics:
     type: git
     url: https://github.com/tier4/diagnostics.git
@@ -165,3 +165,8 @@ repositories:
     type: git
     url: https://github.com/tier4/image_pipeline.git
     version: 47964112293eb19f9f57254b2e6b68706954cc63
+  # removed by galactic sync at 2022/03/14
+  vendor/plotjuggler_ros:
+    type: git
+    url: https://github.com/PlotJuggler/plotjuggler-ros-plugins.git
+    version: galactic

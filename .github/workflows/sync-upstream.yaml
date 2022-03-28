@@ -22,7 +22,7 @@ jobs:
           token: ${{ steps.generate-token.outputs.token }}
           base-branch: tier4/universe
           sync-pr-branch: sync-upstream
-          sync-target-repository: https://github.com/tier4/autoware.proj.git
+          sync-target-repository: https://github.com/tier4/pilot-auto.git
           sync-target-branch: tier4/universe
           pr-title: "chore: sync upstream"
           auto-merge-method: merge

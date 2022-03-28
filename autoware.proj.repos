@@ -10,7 +10,7 @@ repositories:
     version: main
   autoware/launcher:
     type: git
-    url: git@github.com:tier4/autoware_launcher.jpntaxi.git
+    url: git@github.com:tier4/autoware_launch.xx1.git
     version: tier4/universe
   autoware/aip_launcher:
     type: git

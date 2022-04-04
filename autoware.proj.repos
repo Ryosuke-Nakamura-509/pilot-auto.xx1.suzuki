@@ -11,7 +11,7 @@ repositories:
   autoware/launcher:
     type: git
     url: git@github.com:tier4/autoware_launcher.jpntaxi.git
-    version: e9d1813e8ace432fdb8c337cd6afa39dcabc3b20
+    version: 1617a820779822b3dd39703f2c017f0e5e959254
   autoware/aip_launcher:
     type: git
     url: https://github.com/tier4/aip_launcher.git
@@ -132,7 +132,7 @@ repositories:
   vendor/foa:
     type: git
     url: git@github.com:tier4/FieldOperatorApplication.git
-    version: f9587ce86705c41c8f4ab74ed8588c580a76de51
+    version: be96b14391f0462d670367382693e9445dcb5705
   vendor/operational-design-domains:
     type: git
     url: https://gitlab.com/autowarefoundation/operational-design-domains

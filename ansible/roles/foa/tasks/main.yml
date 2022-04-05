@@ -1,0 +1,5 @@
+---
+- name: Pip install pyside
+  pip:
+    name: PySide2==5.15.2.1
+  become: yes

@@ -3,31 +3,31 @@ repositories:
   autoware/universe:
     type: git
     url: https://github.com/tier4/autoware.universe.git
-    version: tier4/main
+    version: beta/v0.2.1
   autoware/common:
     type: git
     url: https://github.com/autowarefoundation/autoware_common.git
-    version: main
+    version: 0fee8c46ac1d94d782f3bd26360b4fe1f5b9b6cc
   autoware/launcher:
     type: git
     url: git@github.com:tier4/autoware_launch.xx1.git
-    version: tier4/universe
+    version: beta/v0.31.0.0
   autoware/aip_launcher:
     type: git
-    url: https://github.com/tier4/aip_launcher.git
+    url: https://github.com/tier4/AutowareArchitectureProposal_aip_launcher.git
     version: tier4/universe
-  autoware/ad_api_adaptor:
+  autoware/api_adaptor:
     type: git
-    url: https://github.com/tier4/tier4_ad_api_adaptor.git
-    version: tier4/universe
-  autoware/tier4_autoware_msgs:
+    url: https://github.com/tier4/AutowareArchitectureProposal_api_adaptor.git
+    version: c5ba9b9d42f161e3564da735558913838a8c4bff
+  autoware/tier4_msgs:
     type: git
-    url: https://github.com/tier4/tier4_autoware_msgs.git
-    version: tier4/universe
+    url: https://github.com/tier4/AutowareArchitectureProposal_msgs.git
+    version: fe73f185786767c1b25ba2dc270595d6cdfcc5e6
   autoware/auto_msgs:
     type: git
     url: https://github.com/tier4/autoware_auto_msgs.git
-    version: tier4/main
+    version: f07518d7b3aedd0be81487261dd51ed366e5d3f4
   autoware/individual_params:
     type: git
     url: git@github.com:tier4/autoware_individual_params.jpntaxi.git
@@ -35,64 +35,68 @@ repositories:
   autoware/calibration_tools:
     type: git
     url: git@github.com:tier4/calibration_tools.git
-    version: tier4/universe
+    version: fe6ce9ec8799a0b51274d5b138c1136d7e8f3eca
   # description
   description/sensor/sensor_component_description:
     type: git
-    url: https://github.com/tier4/sensor_component_description.git
-    version: main
+    url: https://github.com/tier4/sensor_description.iv.git
+    version: ca3db56426c80f579a79c2c310c2ef59e93e76c2
   description/sensor/aip_description:
     type: git
     url: https://github.com/tier4/aip_description.iv.git
-    version: main
+    version: 094dce484cea799fbf6f95f00da708cfbc1d1f21
+  description/sensor/velodyne_simulator:
+    type: git
+    url: https://github.com/tier4/velodyne_simulator.git
+    version: 7bca7039a1d9b0a37a268e7ced3e97b96fe9f5ee
   description/vehicle/jpntaxi_description:
     type: git
     url: git@github.com:tier4/jpntaxi_description.iv.git
-    version: tier4/universe
+    version: 8be2212f9a050467935a283aa98e1b5fbf3b51a9
   description/vehicle/lexus_description:
     type: git
     url: https://github.com/tier4/lexus_description.iv.git
-    version: tier4/universe
+    version: b7c687130f7fb9ef9a1cbdbd9289a9e05d6c01fa
   # simulator
   simulator/scenario_simulator:
     type: git
     url: https://github.com/tier4/scenario_simulator_v2.git
-    version: master
-  simulator/tier4_autoware_msgs: # for scenario_simulator_v2 backward compatibility.
+    version: ec401f2eeff2db466169dcf8e286eb5dce11d003
+  simulator/AutowareArchitectureProposal_msgs: # for scenario_simulator_v2 backward compatibility.
     type: git
-    url: https://github.com/tier4/tier4_autoware_msgs.git
-    version: main
+    url: https://github.com/tier4/AutowareArchitectureProposal_msgs.git
+    version: 4d3f1ac0eddefecd5f36a868996b36b8dabde512
   simulator/logsim:
     type: git
     url: git@github.com:tier4/logsim.git
-    version: main
+    version: 29a046e9c5115a1b67e68bb81a0f48c1b652a9bc
   simulator/awml_evaluation:
     type: git
     url: git@github.com:tier4/AWMLevaluation.git
-    version: main
-  simulator/ndt_convergence_evaluation:
-    type: git
-    url: git@github.com:tier4/ndt_convergence_evaluation.git
-    version: feature/standalone
+    version: v1.2.0
   # ecu_system_setup
   ecu_system_setup:
     type: git
     url: git@github.com:tier4/autoware_ecu_system_setup.git
-    version: main
+    version: 6baceddfce1e4c2420b44c3c6a31f1054ca3d6c9
   # vendor
+  vendor/quaternion_operation:
+    type: git
+    url: https://github.com/OUXT-Polaris/quaternion_operation.git
+    version: f08cd28b357f9feede55f1fb485cb21964f5d594
   # After https://github.com/ANYbotics/grid_map/pull/323 is merged, use upstream.
   vendor/grid_map:
     type: git
     url: https://github.com/tier4/grid_map.git
     version: 657cc055eb90a042057738a85a5651c03e42b1bb
+  vendor/perception_pcl:
+    type: git
+    url: https://github.com/ros-perception/perception_pcl.git
+    version: 2.2.1
   vendor/topic_tools:
     type: git
     url: https://github.com/tier4/topic_tools.git
     version: ac3af3357f009925d29c8979f7613bcf111e58c4
-  vendor/pacmod_interface:
-    type: git
-    url: https://github.com/tier4/pacmod_interface.git
-    version: main
   vendor/usb_cam: # TODO remove after https://github.com/ros-drivers/usb_cam/pull/132 is available in foxy
     type: git
     url: https://github.com/tier4/usb_cam.git
@@ -100,7 +104,7 @@ repositories:
   vendor/tamagawa_imu_driver:
     type: git
     url: https://github.com/tier4/tamagawa_imu_driver.git
-    version: fd169e3b9f14adde42fc2ed7e437af80e68261ef
+    version: 07462f25dd047178f7807eae8267e168369a95d6
   vendor/ublox:
     type: git
     url: https://github.com/tier4/ublox.git
@@ -109,6 +113,10 @@ repositories:
     type: git
     url: https://github.com/tier4/septentrio_gnss_driver.git
     version: d6da33824df8cf5d00cd7762fbe27e8dd5566500
+  vendor/livox-driver:
+    type: git
+    url: https://github.com/tier4/livox_ros2_driver.git
+    version: ef18bb868d92db70b541c21d188961ee6bcac024
   vendor/lidar-driver:
     type: git
     url: git@github.com:tier4/lidar_driver.git
@@ -116,7 +124,7 @@ repositories:
   vendor/rosbridge_suite:
     type: git
     url: https://github.com/tier4/rosbridge_suite.git
-    version: 0ee05e529aef88bf2654b77ddd5ccd7b6fe2ee6b
+    version: 2b2a07d1c444e7c886e03264b10ec503890f2dba
   vendor/rosauth:
     type: git
     url: https://github.com/GT-RAIL/rosauth.git
@@ -124,11 +132,11 @@ repositories:
   vendor/velodyne_vls:
     type: git
     url: https://github.com/tier4/velodyne_vls.git
-    version: tier4/universe
+    version: d58b78436d2e2bd4f7421974d3e72b1498e577ea
   vendor/foa:
     type: git
     url: git@github.com:tier4/FieldOperatorApplication.git
-    version: develop
+    version: rc/v2.1.0
   vendor/operational-design-domains:
     type: git
     url: https://gitlab.com/autowarefoundation/operational-design-domains
@@ -136,11 +144,11 @@ repositories:
   vendor/ndt_omp:
     type: git
     url: https://github.com/tier4/ndt_omp.git
-    version: tier4/main
+    version: 84d313e98f70033f37a664003f90ef90813cb665
   vendor/mussp:
     type: git
     url: https://github.com/tier4/muSSP.git
-    version: c79e98fd5e658f4f90c06d93472faa977bc873b9
+    version: f67f4df5b95fcb28634bb162e09cfeab2ed44d29
   vendor/pointcloud_to_laserscan:
     type: git
     url: https://github.com/tier4/pointcloud_to_laserscan.git
@@ -148,7 +156,7 @@ repositories:
   vendor/ars408_driver:
     type: git
     url: https://github.com/tier4/ars408_driver.git
-    version: use-autoware-auto-msgs
+    version: 8999f6dfdc17c251f69614360001098307c43cf0
   vendor/diagnostics:
     type: git
     url: https://github.com/tier4/diagnostics.git

@@ -55,7 +55,7 @@ jobs:
       - name: Run update script
         run: |
           git clone git@github.com:tier4/autoware-release-scripts.git
-          ./autoware-release-scripts/scripts/update_rc_branches.sh
+          ./autoware-release-scripts/scripts/update_beta_branches.sh
           rm -rf autoware-release-scripts/ src/
 
       - name: Create PR
@@ -68,7 +68,7 @@ jobs:
           author: GitHub <noreply@github.com>
           signoff: false
           base: ${{ env.BASE_BRANCH }}
-          branch: "${{ env.SYNC_BRANCH_PREFIX }}/${{ env.BASE_BRANCH }}"
+          branch: ${{ env.SYNC_BRANCH_PREFIX }}/${{ env.BASE_BRANCH }}
           delete-branch: true
           title: "chore: update rc branch"
           body: |

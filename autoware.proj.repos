@@ -3,7 +3,7 @@ repositories:
   autoware/universe:
     type: git
     url: https://github.com/tier4/autoware.universe.git
-    version: a1c975a9fe3953fdff4a7b5f722526875a39c937
+    version: 1d5a7b3cb375110e6a3d777bad404280df52be1a
   autoware/common:
     type: git
     url: https://github.com/autowarefoundation/autoware_common.git
@@ -11,11 +11,11 @@ repositories:
   autoware/launcher:
     type: git
     url: git@github.com:tier4/autoware_launcher.jpntaxi.git
-    version: 5114333d6f7b8961d5f741e679882f3e855754a6
+    version: 519977ac9ce60a2c3fc1674fdd259d6983d76587
   autoware/aip_launcher:
     type: git
     url: https://github.com/tier4/aip_launcher.git
-    version: cf68849fb863980b45ee048f385c2cf60ec1d887
+    version: cf08f4d507c1f4c10b85cb0b664fbc8d3cb293d2
   autoware/ad_api_adaptor:
     type: git
     url: https://github.com/tier4/tier4_ad_api_adaptor.git
@@ -132,7 +132,7 @@ repositories:
   vendor/foa:
     type: git
     url: git@github.com:tier4/FieldOperatorApplication.git
-    version: a7b28fce602df587ef6b5ecb1df03f8ed9ef579e
+    version: 16c81a44e964214952e58f9d0c6652f8d7ee18cd
   vendor/operational-design-domains:
     type: git
     url: https://gitlab.com/autowarefoundation/operational-design-domains

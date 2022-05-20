@@ -11,7 +11,7 @@ repositories:
   autoware/launcher:
     type: git
     url: git@github.com:tier4/autoware_launcher.jpntaxi.git
-    version: 519977ac9ce60a2c3fc1674fdd259d6983d76587
+    version: 6769035eb51c05031c8521179edbc1da52950042
   autoware/aip_launcher:
     type: git
     url: https://github.com/tier4/aip_launcher.git

@@ -35,7 +35,7 @@ repositories:
   autoware/calibration_tools:
     type: git
     url: git@github.com:tier4/calibration_tools.git
-    version: tier4/universe
+    version: eb57bd404255c9554c0746a8a694a671ff3272c3
   # description
   description/sensor/sensor_component_description:
     type: git
@@ -100,7 +100,7 @@ repositories:
   vendor/tamagawa_imu_driver:
     type: git
     url: https://github.com/tier4/tamagawa_imu_driver.git
-    version: fd169e3b9f14adde42fc2ed7e437af80e68261ef
+    version: 28ad3cd4fb043e5f92353a540c3531cd4cb7bef3
   vendor/ublox:
     type: git
     url: https://github.com/tier4/ublox.git

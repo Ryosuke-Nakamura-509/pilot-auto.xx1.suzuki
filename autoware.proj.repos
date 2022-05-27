@@ -3,7 +3,7 @@ repositories:
   autoware/universe:
     type: git
     url: https://github.com/tier4/autoware.universe.git
-    version: 1d5a7b3cb375110e6a3d777bad404280df52be1a
+    version: 36a77c929cdcd5fb63f91aa63bccbf9fd80db3d0
   autoware/common:
     type: git
     url: https://github.com/autowarefoundation/autoware_common.git
@@ -11,7 +11,7 @@ repositories:
   autoware/launcher:
     type: git
     url: git@github.com:tier4/autoware_launcher.jpntaxi.git
-    version: 6769035eb51c05031c8521179edbc1da52950042
+    version: 561e40fa91aceedc6da4051633d0e70b9bb7b1c6
   autoware/aip_launcher:
     type: git
     url: https://github.com/tier4/aip_launcher.git

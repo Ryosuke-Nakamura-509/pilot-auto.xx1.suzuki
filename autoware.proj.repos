@@ -10,7 +10,7 @@ repositories:
     version: 9706a378c492ab05c1a6a321c5faab2eaf64eac6
   autoware/launcher:
     type: git
-    url: git@github.com:tier4/autoware_launcher.jpntaxi.git
+    url: git@github.com:tier4/autoware_launch.xx1.suzuki.git
     version: 561e40fa91aceedc6da4051633d0e70b9bb7b1c6
   autoware/aip_launcher:
     type: git
@@ -30,7 +30,7 @@ repositories:
     version: f07518d7b3aedd0be81487261dd51ed366e5d3f4
   autoware/individual_params:
     type: git
-    url: git@github.com:tier4/autoware_individual_params.jpntaxi.git
+    url: git@github.com:tier4/autoware_individual_params.xx1.suzuki.git
     version: d8180e05c8cd0ae9238ff33bccf12db67ed61605
   autoware/calibration_tools:
     type: git

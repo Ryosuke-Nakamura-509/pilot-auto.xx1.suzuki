@@ -3,7 +3,7 @@ repositories:
   autoware/universe:
     type: git
     url: https://github.com/tier4/autoware.universe.git
-    version: 36a77c929cdcd5fb63f91aa63bccbf9fd80db3d0
+    version: beta/v0.2.1
   autoware/common:
     type: git
     url: https://github.com/autowarefoundation/autoware_common.git
@@ -11,7 +11,7 @@ repositories:
   autoware/launcher:
     type: git
     url: git@github.com:tier4/autoware_launch.xx1.suzuki.git
-    version: 561e40fa91aceedc6da4051633d0e70b9bb7b1c6
+    version: beta/v0.31.0.0
   autoware/aip_launcher:
     type: git
     url: https://github.com/tier4/aip_launcher.git
@@ -31,7 +31,7 @@ repositories:
   autoware/individual_params:
     type: git
     url: git@github.com:tier4/autoware_individual_params.xx1.suzuki.git
-    version: d8180e05c8cd0ae9238ff33bccf12db67ed61605
+    version: beta/v0.31.0.0
   autoware/calibration_tools:
     type: git
     url: git@github.com:tier4/calibration_tools.git

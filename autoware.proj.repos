@@ -3,7 +3,7 @@ repositories:
   autoware/universe:
     type: git
     url: https://github.com/tier4/autoware.universe.git
-    version: beta/v0.2.1
+    version: beta/v0.2.2
   autoware/common:
     type: git
     url: https://github.com/autowarefoundation/autoware_common.git
@@ -54,26 +54,26 @@ repositories:
     url: https://github.com/tier4/lexus_description.iv.git
     version: 9c6d7fcd9b8dfac6623e82bd826eb9f25a309a64
   # simulator
-  simulator/scenario_simulator:
-    type: git
-    url: https://github.com/tier4/scenario_simulator_v2.git
-    version: f916723190feacbec15ef8bc09a17faeba3dcb6c
-  simulator/tier4_autoware_msgs: # for scenario_simulator_v2 backward compatibility.
-    type: git
-    url: https://github.com/tier4/tier4_autoware_msgs.git
-    version: 4d3f1ac0eddefecd5f36a868996b36b8dabde512
-  simulator/logsim:
-    type: git
-    url: git@github.com:tier4/logsim.git
-    version: d35ab236aa9ab667758cfeb8833a8f15c0a13a28
-  simulator/awml_evaluation:
-    type: git
-    url: git@github.com:tier4/AWMLevaluation.git
-    version: v1.2.1
-  simulator/ndt_convergence_evaluation:
-    type: git
-    url: git@github.com:tier4/ndt_convergence_evaluation.git
-    version: e45e9f76653d1e16bdccd8ee2925befafea1696e
+  #simulator/scenario_simulator:
+  #  type: git
+  #  url: https://github.com/tier4/scenario_simulator_v2.git
+  #  version: f916723190feacbec15ef8bc09a17faeba3dcb6c
+  #simulator/tier4_autoware_msgs: # for scenario_simulator_v2 backward compatibility.
+  #  type: git
+  #  url: https://github.com/tier4/tier4_autoware_msgs.git
+  #  version: 4d3f1ac0eddefecd5f36a868996b36b8dabde512
+  #simulator/logsim:
+  #  type: git
+  #  url: git@github.com:tier4/logsim.git
+  #  version: d35ab236aa9ab667758cfeb8833a8f15c0a13a28
+  #simulator/awml_evaluation:
+  #  type: git
+  #  url: git@github.com:tier4/AWMLevaluation.git
+  #  version: v1.2.1
+  #simulator/ndt_convergence_evaluation:
+  #  type: git
+  #  url: git@github.com:tier4/ndt_convergence_evaluation.git
+  #  version: e45e9f76653d1e16bdccd8ee2925befafea1696e
   # ecu_system_setup
   ecu_system_setup:
     type: git

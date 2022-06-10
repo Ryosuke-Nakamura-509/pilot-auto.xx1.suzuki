@@ -3,14 +3,14 @@ repositories:
   autoware/universe:
     type: git
     url: https://github.com/tier4/autoware.universe.git
-    version: beta/v0.2.1
+    version: beta/v0.2.2
   autoware/common:
     type: git
     url: https://github.com/autowarefoundation/autoware_common.git
     version: 9706a378c492ab05c1a6a321c5faab2eaf64eac6
   autoware/launcher:
     type: git
-    url: git@github.com:tier4/autoware_launcher.jpntaxi.git
+    url: git@github.com:tier4/autoware_launch.xx1.suzuki.git
     version: beta/v0.31.0.0
   autoware/aip_launcher:
     type: git
@@ -30,8 +30,8 @@ repositories:
     version: f07518d7b3aedd0be81487261dd51ed366e5d3f4
   autoware/individual_params:
     type: git
-    url: git@github.com:tier4/autoware_individual_params.jpntaxi.git
-    version: d8180e05c8cd0ae9238ff33bccf12db67ed61605
+    url: git@github.com:tier4/autoware_individual_params.xx1.suzuki.git
+    version: beta/v0.31.0.0
   autoware/calibration_tools:
     type: git
     url: git@github.com:tier4/calibration_tools.git
@@ -45,35 +45,35 @@ repositories:
     type: git
     url: https://github.com/tier4/aip_description.iv.git
     version: 094dce484cea799fbf6f95f00da708cfbc1d1f21
-  description/vehicle/jpntaxi_description:
+  description/vehicle/solio_description:
     type: git
-    url: git@github.com:tier4/jpntaxi_description.iv.git
-    version: 44bbbca76a882ab79afb52a17176e16449ada089
+    url: git@github.com:tier4/solio_description.iv.git
+    version: main
   description/vehicle/lexus_description:
     type: git
     url: https://github.com/tier4/lexus_description.iv.git
     version: 9c6d7fcd9b8dfac6623e82bd826eb9f25a309a64
   # simulator
-  simulator/scenario_simulator:
-    type: git
-    url: https://github.com/tier4/scenario_simulator_v2.git
-    version: f916723190feacbec15ef8bc09a17faeba3dcb6c
-  simulator/tier4_autoware_msgs: # for scenario_simulator_v2 backward compatibility.
-    type: git
-    url: https://github.com/tier4/tier4_autoware_msgs.git
-    version: 4d3f1ac0eddefecd5f36a868996b36b8dabde512
-  simulator/logsim:
-    type: git
-    url: git@github.com:tier4/logsim.git
-    version: d35ab236aa9ab667758cfeb8833a8f15c0a13a28
-  simulator/awml_evaluation:
-    type: git
-    url: git@github.com:tier4/AWMLevaluation.git
-    version: v1.2.1
-  simulator/ndt_convergence_evaluation:
-    type: git
-    url: git@github.com:tier4/ndt_convergence_evaluation.git
-    version: e45e9f76653d1e16bdccd8ee2925befafea1696e
+  #simulator/scenario_simulator:
+  #  type: git
+  #  url: https://github.com/tier4/scenario_simulator_v2.git
+  #  version: f916723190feacbec15ef8bc09a17faeba3dcb6c
+  #simulator/tier4_autoware_msgs: # for scenario_simulator_v2 backward compatibility.
+  #  type: git
+  #  url: https://github.com/tier4/tier4_autoware_msgs.git
+  #  version: 4d3f1ac0eddefecd5f36a868996b36b8dabde512
+  #simulator/logsim:
+  #  type: git
+  #  url: git@github.com:tier4/logsim.git
+  #  version: d35ab236aa9ab667758cfeb8833a8f15c0a13a28
+  #simulator/awml_evaluation:
+  #  type: git
+  #  url: git@github.com:tier4/AWMLevaluation.git
+  #  version: v1.2.1
+  #simulator/ndt_convergence_evaluation:
+  #  type: git
+  #  url: git@github.com:tier4/ndt_convergence_evaluation.git
+  #  version: e45e9f76653d1e16bdccd8ee2925befafea1696e
   # ecu_system_setup
   ecu_system_setup:
     type: git
@@ -132,7 +132,7 @@ repositories:
   vendor/foa:
     type: git
     url: git@github.com:tier4/FieldOperatorApplication.git
-    version: beta/v2.2.0
+    version: 96835542f43af7935019b36437b1775b0bbeb408
   vendor/operational-design-domains:
     type: git
     url: https://gitlab.com/autowarefoundation/operational-design-domains
@@ -174,3 +174,7 @@ repositories:
     type: git
     url: https://github.com/astuff/kvaser_interface
     version: d7ea2fb82a1b61d0ce4c96d1422599f7ee6ed1b7
+  vendor/solio_interface:
+    type: git
+    url: git@github.com:tier4/solio_interface.git
+    version: tier4/universe

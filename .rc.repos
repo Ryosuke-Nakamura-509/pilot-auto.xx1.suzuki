@@ -1,106 +1,98 @@
 repositories:
   # autoware
-  autoware/autoware.iv:
+  autoware/universe:
     type: git
-    url: git@github.com:tier4/autoware.iv.git
-    version: rc/v0.23.1
+    url: https://github.com/tier4/autoware.universe.git
+    version: beta/v0.2.2
+  autoware/common:
+    type: git
+    url: https://github.com/autowarefoundation/autoware_common.git
+    version: 9706a378c492ab05c1a6a321c5faab2eaf64eac6
   autoware/launcher:
     type: git
-    url: git@github.com:tier4/autoware_launcher.jpntaxi.git
-    version: rc/v0.23.1.0
-  autoware/autoware_api_adaptor:
+    url: git@github.com:tier4/autoware_launch.xx1.suzuki.git
+    version: beta/v0.31.0.0
+  autoware/aip_launcher:
     type: git
-    url: git@github.com:tier4/autoware_api_adaptor.git
-    version: 9d4ca406ce75de9ab97255d1d7146d025e834aa7
-  autoware/msgs/autoware_api_msgs:
+    url: https://github.com/tier4/aip_launcher.git
+    version: cf08f4d507c1f4c10b85cb0b664fbc8d3cb293d2
+  autoware/ad_api_adaptor:
     type: git
-    url: git@github.com:tier4/autoware_api_msgs.git
-    version: 45be19b34c8a0e98fc47a430f483f7e19db252a3
-  autoware/msgs/autoware_iv_msgs:
+    url: https://github.com/tier4/tier4_ad_api_adaptor.git
+    version: d622332a21fe332c5381e30f74149b3117968cb2
+  autoware/tier4_autoware_msgs:
     type: git
-    url: git@github.com:tier4/autoware_iv_msgs.git
-    version: bbbf06370965b29f37b1b6141214638bb723f4a1
+    url: https://github.com/tier4/tier4_autoware_msgs.git
+    version: 6e6a8d5b2066791f7b0bc8c12e65ee0d72e2f04b
+  autoware/auto_msgs:
+    type: git
+    url: https://github.com/tier4/autoware_auto_msgs.git
+    version: f07518d7b3aedd0be81487261dd51ed366e5d3f4
   autoware/individual_params:
     type: git
-    url: git@github.com:tier4/autoware_individual_params.jpntaxi.git
-    version: 3b75149bbcbc502b3fe672a2c640570d84037cfb
+    url: git@github.com:tier4/autoware_individual_params.xx1.suzuki.git
+    version: beta/v0.31.0.0
   autoware/calibration_tools:
     type: git
     url: git@github.com:tier4/calibration_tools.git
-    version: c747ac39178aad6b19b77e2c09f0a50556c70f7b
+    version: adcd1e858c3dc1e3235e9003a825ced3d062a26f
   # description
-  description/sensor/sensor_description:
+  description/sensor/sensor_component_description:
     type: git
     url: https://github.com/tier4/sensor_description.iv.git
     version: ca3db56426c80f579a79c2c310c2ef59e93e76c2
   description/sensor/aip_description:
     type: git
     url: https://github.com/tier4/aip_description.iv.git
-    version: b8e08537bf8727218ebf639b5b49842f1ca520bf
-  description/sensor/velodyne_simulator:
+    version: 094dce484cea799fbf6f95f00da708cfbc1d1f21
+  description/vehicle/solio_description:
     type: git
-    url: https://github.com/tier4/velodyne_simulator.git
-    version: 7bca7039a1d9b0a37a268e7ced3e97b96fe9f5ee
-  description/vehicle/jpntaxi_description:
-    type: git
-    url: git@github.com:tier4/jpntaxi_description.iv.git
-    version: d5cd10c06918aee8e23f4db332a3eed20b103dcf
+    url: git@github.com:tier4/solio_description.iv.git
+    version: main
   description/vehicle/lexus_description:
     type: git
     url: https://github.com/tier4/lexus_description.iv.git
-    version: 4a3a06e297f85a737d2b5879b508843b2998038a
+    version: 9c6d7fcd9b8dfac6623e82bd826eb9f25a309a64
   # simulator
-  simulator/planning_simulator:
-    type: git
-    url: git@github.com:tier4/planning_simulator.git
-    version: 512aaa59a16231b6a3d5cfe17ec2e54094c99be9
-  simulator/planning_simulator_launcher:
-    type: git
-    url: git@github.com:tier4/planning_sim_launcher.git
-    version: 8db18efcafa3a7647d0958454177f242d3dcb70e
-  simulator/scenario_runner:
-    type: git
-    url: git@github.com:tier4/scenario_simulator_v1.git
-    version: c9dabc751ea86be351268d0d396bf7a8dcf77633
-  simulator/scenario_simulator:
-    type: git
-    url: https://github.com/tier4/scenario_simulator_v2.git
-    version: e46ee04362856844c5f1a98f4874d6246b318f1d
-  simulator/logsim:
-    type: git
-    url: git@github.com:tier4/logsim.git
-    version: 53144d2f979961b3c0fb0b1583645c2954bf4560
+  #simulator/scenario_simulator:
+  #  type: git
+  #  url: https://github.com/tier4/scenario_simulator_v2.git
+  #  version: f916723190feacbec15ef8bc09a17faeba3dcb6c
+  #simulator/tier4_autoware_msgs: # for scenario_simulator_v2 backward compatibility.
+  #  type: git
+  #  url: https://github.com/tier4/tier4_autoware_msgs.git
+  #  version: 4d3f1ac0eddefecd5f36a868996b36b8dabde512
+  #simulator/logsim:
+  #  type: git
+  #  url: git@github.com:tier4/logsim.git
+  #  version: d35ab236aa9ab667758cfeb8833a8f15c0a13a28
+  #simulator/awml_evaluation:
+  #  type: git
+  #  url: git@github.com:tier4/AWMLevaluation.git
+  #  version: v1.2.1
+  #simulator/ndt_convergence_evaluation:
+  #  type: git
+  #  url: git@github.com:tier4/ndt_convergence_evaluation.git
+  #  version: e45e9f76653d1e16bdccd8ee2925befafea1696e
   # ecu_system_setup
   ecu_system_setup:
     type: git
     url: git@github.com:tier4/autoware_ecu_system_setup.git
-    version: 5866f0ec7bd06847ad85a6af7b67caa22c6cff48
+    version: 5adab2ff73e038ea4100b05834bd1d0930dffdff
   # vendor
-  vendor/quaternion_operation:
-    type: git
-    url: https://github.com/OUXT-Polaris/quaternion_operation.git
-    version: f08cd28b357f9feede55f1fb485cb21964f5d594
   # After https://github.com/ANYbotics/grid_map/pull/323 is merged, use upstream.
   vendor/grid_map:
     type: git
     url: https://github.com/tier4/grid_map.git
     version: 657cc055eb90a042057738a85a5651c03e42b1bb
-  vendor/perception_pcl:
-    type: git
-    url: https://github.com/ros-perception/perception_pcl.git
-    version: adff50fe9b6adf4770c75275252707de798c4ea6
   vendor/topic_tools:
     type: git
     url: https://github.com/tier4/topic_tools.git
     version: ac3af3357f009925d29c8979f7613bcf111e58c4
-  vendor/pacmod3: # TODO remove after foxy-version is released
+  vendor/pacmod_interface:
     type: git
-    url: https://github.com/astuff/pacmod3.git
-    version: deec9f5bcf8585d1443f26f4731bbb7b4e6fb8eb
-  vendor/kvaser_interface: # TODO remove after foxy-version is released
-    type: git
-    url: https://github.com/tier4/kvaser_interface.git
-    version: 3602a186b4dfebfeea17bcaaedede8cd04d4baea
+    url: https://github.com/tier4/pacmod_interface.git
+    version: 9f2d78f9987d6203a2e150c819bfa8bbb89de1cd
   vendor/usb_cam: # TODO remove after https://github.com/ros-drivers/usb_cam/pull/132 is available in foxy
     type: git
     url: https://github.com/tier4/usb_cam.git
@@ -108,7 +100,7 @@ repositories:
   vendor/tamagawa_imu_driver:
     type: git
     url: https://github.com/tier4/tamagawa_imu_driver.git
-    version: 07462f25dd047178f7807eae8267e168369a95d6
+    version: fd169e3b9f14adde42fc2ed7e437af80e68261ef
   vendor/ublox:
     type: git
     url: https://github.com/tier4/ublox.git
@@ -121,10 +113,14 @@ repositories:
     type: git
     url: https://github.com/tier4/livox_ros2_driver.git
     version: ef18bb868d92db70b541c21d188961ee6bcac024
+  vendor/lidar-driver:
+    type: git
+    url: git@github.com:tier4/lidar_driver.git
+    version: v0.1.4
   vendor/rosbridge_suite:
     type: git
     url: https://github.com/tier4/rosbridge_suite.git
-    version: 730b945d70c1ab428899330559715dcfa0ff5c17
+    version: 0ee05e529aef88bf2654b77ddd5ccd7b6fe2ee6b
   vendor/rosauth:
     type: git
     url: https://github.com/GT-RAIL/rosauth.git
@@ -132,15 +128,11 @@ repositories:
   vendor/velodyne_vls:
     type: git
     url: https://github.com/tier4/velodyne_vls.git
-    version: 97700640ccd36ac66a210c7cfad2340dee5b0bbd
-  vendor/rqt_runtime_monitor:
-    type: git
-    url: https://github.com/tier4/rqt_runtime_monitor.git
-    version: e76c9846da6a8728d03e80b8b01dca61c4e4d99d
+    version: d58b78436d2e2bd4f7421974d3e72b1498e577ea
   vendor/foa:
     type: git
     url: git@github.com:tier4/FieldOperatorApplication.git
-    version: 844e42bdc5039b3eb420ce869284f350d09bf47e
+    version: 96835542f43af7935019b36437b1775b0bbeb408
   vendor/operational-design-domains:
     type: git
     url: https://gitlab.com/autowarefoundation/operational-design-domains
@@ -148,11 +140,11 @@ repositories:
   vendor/ndt_omp:
     type: git
     url: https://github.com/tier4/ndt_omp.git
-    version: 50ebc3763953056c408161e872abf4c4f8152c5d
+    version: cb8d588912b1503ea4b2660c04b0c70179b678b6
   vendor/mussp:
     type: git
     url: https://github.com/tier4/muSSP.git
-    version: f67f4df5b95fcb28634bb162e09cfeab2ed44d29
+    version: c79e98fd5e658f4f90c06d93472faa977bc873b9
   vendor/pointcloud_to_laserscan:
     type: git
     url: https://github.com/tier4/pointcloud_to_laserscan.git
@@ -160,16 +152,11 @@ repositories:
   vendor/ars408_driver:
     type: git
     url: https://github.com/tier4/ars408_driver.git
-    version: d8f391ab6f9b6241dd76c9845adf6a8c92c34d9d
-  vendor/hash_library_vendor:
+    version: 8999f6dfdc17c251f69614360001098307c43cf0
+  vendor/diagnostics:
     type: git
-    url: https://github.com/tier4/hash_library_vendor.git
-    version: fd300d33ac8f4dcc5e2c6d4f0415df5062660f23
-  # TODO: Remove behavior tree from repos after runtime error is resolved in released package
-  vendor/behaviortree-cpp-v3:
-    type: git
-    url: https://github.com/BehaviorTree/BehaviorTree.CPP.git
-    version: eb9ff2e63d713c94106f57dd91565a1840223a70
+    url: https://github.com/tier4/diagnostics.git
+    version: da6cdbe674dd7bf1e71ee6fb73825e3e43644f0c
   vendor/spinnaker:
     type: git
     url: https://github.com/tier4/spinnaker.git
@@ -178,17 +165,16 @@ repositories:
     type: git
     url: https://github.com/tier4/image_pipeline.git
     version: 47964112293eb19f9f57254b2e6b68706954cc63
-  # TODO: Remove robot_state_publisher from repos after preventing timer publish is resolved in released package
-  vendor/robot_state_publisher:
+  # removed by galactic sync at 2022/03/14
+  vendor/plotjuggler_ros:
     type: git
-    url: https://github.com/ros/robot_state_publisher.git
-    version: 51c5f53baa19232e6f99e2638619a9faa6697d78
-  # missing_packages
-  missing_packages/astuff_sensor_msgs:
+    url: https://github.com/PlotJuggler/plotjuggler-ros-plugins.git
+    version: 1.7.3
+  vendor/kvaser_interface: # temporary: https://github.com/astuff/kvaser_interface/pull/77
     type: git
-    url: https://github.com/astuff/astuff_sensor_msgs.git
-    version: fb1f3a6dcf2d41ed61611b87286e67f9f1b79624
-  missing_packages/automotive_autonomy_msgs:
+    url: https://github.com/astuff/kvaser_interface
+    version: d7ea2fb82a1b61d0ce4c96d1422599f7ee6ed1b7
+  vendor/solio_interface:
     type: git
-    url: https://github.com/astuff/automotive_autonomy_msgs.git
-    version: 40fdb58a8aaddf2866f4ddd3da71dfd8e3a491ad
+    url: git@github.com:tier4/solio_interface.git
+    version: tier4/universe

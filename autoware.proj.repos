@@ -49,10 +49,10 @@ repositories:
     type: git
     url: git@github.com:tier4/solio_description.iv.git
     version: beta/v0.31.0.0
-  description/vehicle/lexus_description:
-    type: git
-    url: https://github.com/tier4/lexus_description.iv.git
-    version: 9c6d7fcd9b8dfac6623e82bd826eb9f25a309a64
+  #description/vehicle/lexus_description:
+  #  type: git
+  #  url: https://github.com/tier4/lexus_description.iv.git
+  #  version: 9c6d7fcd9b8dfac6623e82bd826eb9f25a309a64
   # simulator
   #simulator/scenario_simulator:
   #  type: git
@@ -89,10 +89,10 @@ repositories:
     type: git
     url: https://github.com/tier4/topic_tools.git
     version: ac3af3357f009925d29c8979f7613bcf111e58c4
-  vendor/pacmod_interface:
-    type: git
-    url: https://github.com/tier4/pacmod_interface.git
-    version: 9f2d78f9987d6203a2e150c819bfa8bbb89de1cd
+  #vendor/pacmod_interface:
+  #  type: git
+  #  url: https://github.com/tier4/pacmod_interface.git
+  #  version: 9f2d78f9987d6203a2e150c819bfa8bbb89de1cd
   vendor/usb_cam: # TODO remove after https://github.com/ros-drivers/usb_cam/pull/132 is available in foxy
     type: git
     url: https://github.com/tier4/usb_cam.git

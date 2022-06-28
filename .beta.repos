@@ -53,10 +53,10 @@ repositories:
     type: git
     url: git@github.com:tier4/jpntaxi_description.iv.git
     version: 8be2212f9a050467935a283aa98e1b5fbf3b51a9
-  description/vehicle/lexus_description:
-    type: git
-    url: https://github.com/tier4/lexus_description.iv.git
-    version: b7c687130f7fb9ef9a1cbdbd9289a9e05d6c01fa
+  #description/vehicle/lexus_description:
+  #  type: git
+  #  url: https://github.com/tier4/lexus_description.iv.git
+  #  version: b7c687130f7fb9ef9a1cbdbd9289a9e05d6c01fa
   # simulator
   simulator/scenario_simulator:
     type: git

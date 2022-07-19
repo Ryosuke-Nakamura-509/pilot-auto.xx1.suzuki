@@ -21,3 +21,4 @@ services:
     params:
       vehicle_model: jpntaxi
       sensor_model: aip_xx1
+      use_foa: true

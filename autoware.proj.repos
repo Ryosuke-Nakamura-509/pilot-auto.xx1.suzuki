@@ -61,10 +61,10 @@ repositories:
     type: git
     url: https://github.com/tier4/tier4_autoware_msgs.git
     version: 4d3f1ac0eddefecd5f36a868996b36b8dabde512
-  simulator/logsim:
-    type: git
-    url: git@github.com:tier4/logsim.git
-    version: d35ab236aa9ab667758cfeb8833a8f15c0a13a28
+  #simulator/logsim:
+  #  type: git
+  #  url: git@github.com:tier4/logsim.git
+  #  version: d35ab236aa9ab667758cfeb8833a8f15c0a13a28
   #simulator/awml_evaluation:
   #  type: git
   #  url: git@github.com:tier4/AWMLevaluation.git

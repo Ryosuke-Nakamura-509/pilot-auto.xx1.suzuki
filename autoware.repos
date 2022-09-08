@@ -10,7 +10,7 @@ repositories:
     version: main
   autoware/launcher:
     type: git
-    url: https://github.com/tier4/autoware_launch.git
+    url: git@github.com:tier4/autoware_launch.xx1.git
     version: tier4/universe
   autoware/aip_launcher:
     type: git
@@ -34,7 +34,7 @@ repositories:
     version: main
   autoware/individual_params:
     type: git
-    url: https://github.com/tier4/autoware_individual_params.git
+    url: git@github.com:tier4/autoware_individual_params.jpntaxi.git
     version: main
   # description
   description/sensor/sensor_component_description:
@@ -45,6 +45,10 @@ repositories:
     type: git
     url: https://github.com/tier4/aip_description.iv.git
     version: main
+  description/vehicle/jpntaxi_description:
+    type: git
+    url: git@github.com:tier4/jpntaxi_description.iv.git
+    version: tier4/universe
   description/vehicle/lexus_description:
     type: git
     url: https://github.com/tier4/lexus_description.iv.git
@@ -84,6 +88,14 @@ repositories:
     type: git
     url: https://github.com/tier4/velodyne_vls.git
     version: tier4/universe
+  vendor/foa:
+    type: git
+    url: git@github.com:tier4/FieldOperatorApplication.git
+    version: develop
+  vendor/operational-design-domains:
+    type: git
+    url: https://gitlab.com/autowarefoundation/operational-design-domains
+    version: 42321f9a04fcaef9caf3694530e1c63d3e27c47a
   vendor/ndt_omp:
     type: git
     url: https://github.com/tier4/ndt_omp.git

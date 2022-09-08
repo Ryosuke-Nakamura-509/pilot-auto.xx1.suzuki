@@ -21,8 +21,9 @@ simulations:
         cpu: 8
         memory: 16384
       parameters:
-        vehicle_model: lexus
+        vehicle_model: jpntaxi
         sensor_model: aip_xx1
+        use_foa: "true"
         autoware_launch_package: autoware_launch
         autoware_launch_file: planning_simulator.launch.xml
         architecture_type: awf/universe

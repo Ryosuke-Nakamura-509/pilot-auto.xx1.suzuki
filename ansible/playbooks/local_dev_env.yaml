@@ -4,3 +4,4 @@
   connection: local
   roles:
     - pilot_auto.dev_env.git_lfs
+    - pilot_auto.dev_env.foa

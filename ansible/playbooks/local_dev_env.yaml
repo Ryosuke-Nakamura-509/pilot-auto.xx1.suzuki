@@ -3,4 +3,5 @@
 - hosts: localhost
   connection: local
   roles:
-    - role: pilot_auto.dev_env.foa
+    - pilot_auto.dev_env.git_lfs
+    - pilot_auto.dev_env.foa

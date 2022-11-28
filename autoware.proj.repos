@@ -53,26 +53,26 @@ repositories:
   #  type: git
   #  url: https://github.com/tier4/lexus_description.iv.git
   #  version: 9c6d7fcd9b8dfac6623e82bd826eb9f25a309a64
-  simulator/scenario_simulator:
-    type: git
-    url: https://github.com/tier4/scenario_simulator_v2.git
-    version: d637f145bb7fc0b4006a27c1a86ba4cee2e6439a
+  #simulator/scenario_simulator:
+  #  type: git
+  #  url: https://github.com/tier4/scenario_simulator_v2.git
+  #  version: d637f145bb7fc0b4006a27c1a86ba4cee2e6439a
   simulator/autoware_msgs: # for scenario_simulator_v2 backward compatibility.
     type: git
     url: https://github.com/tier4/tier4_autoware_msgs.git
     version: 4d3f1ac0eddefecd5f36a868996b36b8dabde512
-  #simulator/logsim:
-  #  type: git
-  #  url: git@github.com:tier4/logsim.git
-  #  version: d35ab236aa9ab667758cfeb8833a8f15c0a13a28
-  #simulator/awml_evaluation:
-  #  type: git
-  #  url: git@github.com:tier4/AWMLevaluation.git
-  #  version: v1.2.1
-  #simulator/ndt_convergence_evaluation:
-  #  type: git
-  #  url: git@github.com:tier4/ndt_convergence_evaluation.git
-  #  version: e45e9f76653d1e16bdccd8ee2925befafea1696e
+  simulator/driving_log_replayer:
+    type: git
+    url: https://github.com/tier4/driving_log_replayer.git
+    version: temp/suzuki
+  simulator/perception_eval:
+    type: git
+    url: https://github.com/tier4/autoware_perception_evaluation.git
+    version: main
+  simulator/vendor/ros2_numpy:
+    type: git
+    url: https://github.com/Box-Robotics/ros2_numpy.git
+    version: humble
   ecu_system_setup:
     type: git
     url: git@github.com:tier4/autoware_ecu_system_setup.git

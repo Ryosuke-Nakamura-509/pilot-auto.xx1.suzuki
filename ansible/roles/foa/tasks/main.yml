@@ -1,0 +1,6 @@
+- name: Pip install required library
+  pip:
+    name:
+      - PySide2==5.15.2.1
+      - pygame==2.1.0
+  become: true

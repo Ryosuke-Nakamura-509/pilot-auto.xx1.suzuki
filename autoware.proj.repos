@@ -175,4 +175,4 @@ repositories:
   vendor/solio_interface:
     type: git
     url: git@github.com:tier4/solio_interface.git
-    version: 46b6e6bf7c40532989694af7cde45753965a5a1a
+    version: a729b53b2722a1f0163b248b0e2ca58daafb931c

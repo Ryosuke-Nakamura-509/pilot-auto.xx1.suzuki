@@ -78,7 +78,7 @@ repositories:
   vendor/ublox:
     type: git
     url: https://github.com/tier4/ublox.git
-    version: dc49c2dcc9384401030c77d7db05fea9161cbcc0
+    version: tier4/rolling
   vendor/lidar-driver:
     type: git
     url: git@github.com:tier4/lidar_driver.git

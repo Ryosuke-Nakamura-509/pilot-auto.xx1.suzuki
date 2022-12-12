@@ -7,7 +7,7 @@
   become: yes
 
 - name: Autoware (update rosdep)
-  command: rosdep update
+  command: rosdep update --include-eol-distros
   become: yes
 
 - name: Autoware (rosdep install dependencies)

@@ -54,7 +54,7 @@
   become: yes
 
 - name: ROS2 (update rosdep)
-  command: rosdep update
+  command: rosdep update --include-eol-distros
   become: no
 
 - name: ROS2 (add path >> bashrc)

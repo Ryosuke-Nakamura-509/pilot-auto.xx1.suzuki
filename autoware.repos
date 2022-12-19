@@ -62,6 +62,15 @@ repositories:
     type: git
     url: git@github.com:tier4/autoware_ecu_system_setup.git
     version: main
+  # multi_data_monitor
+  debug/multi_data_monitor:
+    type: git
+    url: https://github.com/tier4/multi_data_monitor.git
+    version: main
+  debug/generic_type_utility:
+    type: git
+    url: https://github.com/tier4/generic_type_utility.git
+    version: main
   # vendor
   vendor/pacmod_interface:
     type: git

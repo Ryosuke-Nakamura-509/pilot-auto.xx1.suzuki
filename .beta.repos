@@ -79,6 +79,15 @@ repositories:
     type: git
     url: git@github.com:tier4/autoware_ecu_system_setup.git
     version: 6baceddfce1e4c2420b44c3c6a31f1054ca3d6c9
+  # multi_data_monitor
+  debug/multi_data_monitor:
+    type: git
+    url: https://github.com/tier4/multi_data_monitor.git
+    version: main
+  debug/generic_type_utility:
+    type: git
+    url: https://github.com/tier4/generic_type_utility.git
+    version: main
   # vendor
   vendor/quaternion_operation:
     type: git

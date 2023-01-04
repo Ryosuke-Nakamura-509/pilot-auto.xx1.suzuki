@@ -19,7 +19,7 @@ repositories:
   autoware/ad_api_adaptor:
     type: git
     url: https://github.com/tier4/tier4_ad_api_adaptor.git
-    version: 5084f9c8eaf03458a216060798da2b1e4fa96f28
+    version: 9ca8b24eee7d0d23a2ebfcc5614ebfd3a9d01dbb
   autoware/tier4_autoware_msgs:
     type: git
     url: https://github.com/tier4/tier4_autoware_msgs.git
@@ -61,7 +61,7 @@ repositories:
   ecu_system_setup:
     type: git
     url: git@github.com:tier4/autoware_ecu_system_setup.git
-    version: c53cfe8cb04fc393cba9738f336b83015af97c85
+    version: 325d13bdc1f515290252a35bd7521f980a7b466a
   # multi_data_monitor
   debug/multi_data_monitor:
     type: git

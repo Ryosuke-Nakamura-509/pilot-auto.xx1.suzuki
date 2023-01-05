@@ -99,7 +99,7 @@ repositories:
   vendor/foa:
     type: git
     url: git@github.com:tier4/FieldOperatorApplication.git
-    version: 6ca48afb1e4063e84a03e099cd3bd02559becc5a
+    version: beta/v3.1.0
   vendor/ndt_omp:
     type: git
     url: https://github.com/tier4/ndt_omp.git

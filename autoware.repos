@@ -52,7 +52,7 @@ repositories:
   description/vehicle/jpntaxi_description:
     type: git
     url: git@github.com:tier4/jpntaxi_description.git
-    version: 7449f6f17c36b4d021ad1b14c1ef9ae73fd3abd1
+    version: 5466e33bb51057badeda772963bbacb6cf13b458
   description/vehicle/lexus_description:
     type: git
     url: https://github.com/tier4/lexus_description.iv.git

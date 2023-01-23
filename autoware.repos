@@ -3,7 +3,7 @@ repositories:
   autoware/universe:
     type: git
     url: https://github.com/tier4/autoware.universe.git
-    version: 9a8cd1d7080e496f58651b6d95e1d11ed9693ace
+    version: 297b1d525ba995b252bd0181545a7959dc903028
   autoware/common:
     type: git
     url: https://github.com/autowarefoundation/autoware_common.git
@@ -99,7 +99,7 @@ repositories:
   vendor/foa:
     type: git
     url: git@github.com:tier4/FieldOperatorApplication.git
-    version: 889abbbfa61a1b851c2c97d79c8c74f84ca0c0f5
+    version: 8cb658eba533e88971898aaca75bf86f83fc281e
   vendor/ndt_omp:
     type: git
     url: https://github.com/tier4/ndt_omp.git

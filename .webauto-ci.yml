@@ -24,6 +24,7 @@ simulations:
         vehicle_model: jpntaxi
         sensor_model: aip_xx1
         use_foa: "true"
+        use_external_lc: "false"
         autoware_launch_package: autoware_launch
         autoware_launch_file: planning_simulator.launch.xml
         architecture_type: awf/universe

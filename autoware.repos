@@ -71,6 +71,11 @@ repositories:
     type: git
     url: https://github.com/tier4/generic_type_utility.git
     version: v1.0.0
+  # debug_tools
+  debug/debug_tools:
+    type: git
+    url: git@github.com:tier4/debug_tools.git
+    version: 7bf747bfd094a324a2db8625c8aa11d32968ef3b
   # vendor
   vendor/pacmod_interface:
     type: git

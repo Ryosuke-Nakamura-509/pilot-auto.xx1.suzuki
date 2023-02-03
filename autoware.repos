@@ -3,7 +3,7 @@ repositories:
   autoware/universe:
     type: git
     url: https://github.com/tier4/autoware.universe.git
-    version: bb971688cd099bed50ec15510681ea76ccdd9139
+    version: dce7977fdbae664d5afa851dd08f5d6ce3686f2e
   autoware/common:
     type: git
     url: https://github.com/autowarefoundation/autoware_common.git
@@ -75,7 +75,7 @@ repositories:
   debug/debug_tools:
     type: git
     url: git@github.com:tier4/debug_tools.git
-    version: 7bf747bfd094a324a2db8625c8aa11d32968ef3b
+    version: v2023.1.2
   # vendor
   vendor/pacmod_interface:
     type: git
@@ -104,7 +104,7 @@ repositories:
   vendor/foa:
     type: git
     url: git@github.com:tier4/FieldOperatorApplication.git
-    version: e5cc1ebdbcfee25eabfbb4c13a4ad1fd9c3ca298
+    version: 41381d2dca61add1a0ce53c603d443997073022a
   vendor/ndt_omp:
     type: git
     url: https://github.com/tier4/ndt_omp.git

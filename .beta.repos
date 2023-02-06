@@ -7,7 +7,7 @@ repositories:
   autoware/common:
     type: git
     url: https://github.com/autowarefoundation/autoware_common.git
-    version: 6916df26fafe6749db4b1d5bd6636a92444fc48d
+    version: e1e46ca2206e0521c9d1237850869b7919214911
   autoware/launcher:
     type: git
     url: git@github.com:tier4/autoware_launch.xx1.git

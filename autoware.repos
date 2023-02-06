@@ -141,3 +141,7 @@ repositories:
     type: git
     url: git@github.com:tier4/solio_interface.git
     version: a729b53b2722a1f0163b248b0e2ca58daafb931c
+  vendor/septentrio:
+    type: git
+    url: https://github.com/tier4/septentrio_gnss_driver.git
+    version: d6da33824df8cf5d00cd7762fbe27e8dd5566500

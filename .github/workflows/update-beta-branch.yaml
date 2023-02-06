@@ -1,21 +1,43 @@
-name: update beta branch
+name: update-beta-branch
 
 on:
   schedule:
-    - cron: 0 0 * * 0
+    - cron: 0 0 * * *
   workflow_dispatch:
 
 env:
   SYNC_BRANCH_PREFIX: update-beta-branch
 
 jobs:
+  search-beta-branch:
+    runs-on: ubuntu-latest
+    outputs:
+      beta-branch: ${{ steps.search-beta-branch.outputs.value }}
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Search beta branch
+        id: search-beta-branch
+        run: |
+          branch_names=$(git branch -a | grep -E 'remotes/origin/beta/v[0-9]+(\.[0-9]+)*$' | sed -E 's|.*(beta/.*)|\1|g')
+          if [ -n "$branch_names" ]; then
+            branch_names_json=$(printf '"%s", ' $branch_names)
+            branch_names_json="[${branch_names_json%, }]"
+            echo ::set-output name=value::"$branch_names_json"
+          fi
+          echo "Detected beta branch: $branch_names_json"
+
   update-beta-branch:
-    runs-on: ubuntu-20.04
+    needs: search-beta-branch
+    if: ${{ needs.search-beta-branch.outputs.beta-branch != '' }}
+    runs-on: ubuntu-latest
     strategy:
       fail-fast: false
       matrix:
-        beta-branch:
-          - beta/v0.30.0.0 # TODO(maintainer): Edit here in each fork repository
+        beta-branch: ${{ fromJson(needs.search-beta-branch.outputs.beta-branch) }}
     steps:
       - name: Set BASE_BRANCH
         run: |
@@ -55,7 +77,7 @@ jobs:
       - name: Run update script
         run: |
           git clone git@github.com:tier4/autoware-release-scripts.git
-          ./autoware-release-scripts/scripts/update_rc_branches.sh
+          ./autoware-release-scripts/scripts/update_beta_branches.sh
           rm -rf autoware-release-scripts/ src/
 
       - name: Create PR
@@ -63,21 +85,30 @@ jobs:
         uses: peter-evans/create-pull-request@v4
         with:
           token: ${{ steps.generate-token.outputs.token }}
-          commit-message: update rc branch
+          commit-message: "chore: update beta branch for ${{ env.BASE_BRANCH }}"
           committer: GitHub <noreply@github.com>
           author: GitHub <noreply@github.com>
           signoff: false
           base: ${{ env.BASE_BRANCH }}
-          branch: "${{ env.SYNC_BRANCH_PREFIX }}/${{ env.BASE_BRANCH }}"
+          branch: ${{ env.SYNC_BRANCH_PREFIX }}/${{ env.BASE_BRANCH }}
           delete-branch: true
-          title: update rc branch
+          title: "chore: update beta branch for ${{ env.BASE_BRANCH }}"
           body: |
-            update rc branch
+            update beta branch for ${{ env.BASE_BRANCH }}
           labels: |
-            update-rc-branch
+            bot
+            update-beta-branch
           draft: false
 
       - name: Check outputs
         run: |
           echo "Pull Request Number - ${{ steps.create-pr.outputs.pull-request-number }}"
           echo "Pull Request URL - ${{ steps.create-pr.outputs.pull-request-url }}"
+
+      - name: Enable auto-merge
+        if: ${{ steps.create-pr.outputs.pull-request-operation == 'created' }}
+        uses: peter-evans/enable-pull-request-automerge@v2
+        with:
+          token: ${{ steps.generate-token.outputs.token }}
+          pull-request-number: ${{ steps.create-pr.outputs.pull-request-number }}
+          merge-method: squash

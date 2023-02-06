@@ -91,8 +91,8 @@ repositories:
     version: ac3af3357f009925d29c8979f7613bcf111e58c4
   vendor/pacmod_interface:
     type: git
-    url: https://github.com/tier4/pacmod_interface.git
-    version: 9f2d78f9987d6203a2e150c819bfa8bbb89de1cd
+    url: https://github.com/astuff/pacmod3.git
+    version: deec9f5bcf8585d1443f26f4731bbb7b4e6fb8eb
   vendor/usb_cam: # TODO remove after https://github.com/ros-drivers/usb_cam/pull/132 is available in foxy
     type: git
     url: https://github.com/tier4/usb_cam.git

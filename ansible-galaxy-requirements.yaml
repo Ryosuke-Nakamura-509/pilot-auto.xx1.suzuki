@@ -1,4 +1,7 @@
 collections:
+  - source: ./ansible
+    type: dir
+
   - name: https://github.com/autowarefoundation/autoware.git#/ansible
     type: git
-    version: main
+    version: 9e35fd1c6f8bb16c166f6408b41f6280ee1356f2

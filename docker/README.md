@@ -1,135 +1,164 @@
-# Dockerfile for autoware.proj
+# Docker images for Pilot.Auto
 
-This directory contains files to run autoware.proj on Docker.
+We have two types of Docker image: `development` and `prebuilt`.
 
-## Build
+1. The `development` image enables you to develop Pilot.Auto without setting up the local development environment.
+2. The `prebuilt` image contains executables and enables you to try out Pilot.Auto quickly.
+   - Note that the prebuilt image is not designed for deployment on a real vehicle!
 
-Just run `build.sh` in this directory. This takes some time.
+**Note**: Before proceeding, confirm and agree with the [NVIDIA Deep Learning Container license](https://developer.nvidia.com/ngc/nvidia-deep-learning-container-license). By pulling and using the Pilot.Auto images, you accept the terms and conditions of the license.
 
-```sh
-./docker/build.sh
-```
+## Prerequisites
 
-## Run
-
-### Prerequisites
-
+- [Docker](https://docs.docker.com/engine/install/ubuntu/)
 - [rocker](https://github.com/osrf/rocker)
+  - We use `rocker` to enable GUI applications such as `rviz` and `rqt` on Docker Containers.
+  - Refer to [here](http://wiki.ros.org/docker/Tutorials/GUI) for more details.
 
-  To enable GUI applications on Docker Containers, this script uses `rocker`.
-  Please see [here](http://wiki.ros.org/docker/Tutorials/GUI) for more details.
+The [setup script](https://github.com/autowarefoundation/autoware/tree/main/setup-dev-env.sh) will install these dependencies through the following roles.
 
-  ```sh
-  sudo apt-get install python3-rocker
-  ```
+- [Docker](https://github.com/autowarefoundation/autoware/tree/main/ansible/roles/docker_engine/README.md)
+- [rocker](https://github.com/autowarefoundation/autoware/tree/main/ansible/roles/rocker/README.md)
 
-### Examples
+## Usage
 
-#### How to do a rosbag Simulation
+### Development image
 
-```sh
-# Build your docker image
-cd ~/
-git clone git@github.com:tier4/autoware.proj.git
-~/autoware.proj/docker/build.sh
-
-# Create and move to a workspace
-mkdir ~/rosbag_simulation
-cd ~/rosbag_simulation
-
-# Download a sample map
-gdown --id 1ovrJcFS5CZ2H51D8xVWNtEvj_oiXW-zk
-unzip rosbag_sample_map.zip -d map
-
-# Download a sample rosbag file
-mkdir sample
-cd sample
-gdown --id 1wLWyOlfH_-k4VYBgae1KAFlKdwJnH_si
-
-# Accept X-access from localhost
-xhost +local:
-
-# Run Autoware in the simulation mode
-# NOTE: Autoware runs with root privileges since NVIDIA driver has to be enabled
-rocker --nvidia --x11 --user --privileged --volume ~/rosbag_simulation -- autoware:pre-built
-ros2 launch autoware_launch logging_simulator.launch.xml map_path:=$HOME/rosbag_simulation/map vehicle_model:=lexus sensor_model:=aip_xx1
-
-# Play the sample rosbag file in another terminal
-rocker --nvidia --x11 --user --volume ~/rosbag_simulation -- autoware:pre-built
-ros2 bag play ~/rosbag_simulation/sample/sample.625-2.bag2_0.db3 -r 0.2
+```bash
+docker run --rm -it \
+  -v {path_to_your_workspace}:/autoware \
+  ghcr.io/tier4/pilot-auto:latest
 ```
 
-### For Autoware development
+To run with `rocker`:
 
-In Autoware development, it is often better to mount a local project directory and do the development on a local environment rather than developing in a container. The reasons are because:
+If you use `rocker<=0.2.9`, add an option of `--env NVIDIA_DRIVER_CAPABILITIES=""` or `--env NVIDIA_DRIVER_CAPABILITIES=compute,utility,graphics` to avoid the CUDA environment error. For more details, see [this issue](https://github.com/tier4/autoware/issues/2452).
 
-- You can use your favorite editor and do your development as always you do in the local environment. You don't need to install your editor to the container.
-- Existing changes in the local files will be reflected to the container. Also, changes are preserved even after the container is destroyed.
-
-You can realize this by following the procedure below.
-
-#### 1. Do your modification to the project
-
-Open a terminal and go to the project directory, say `~/autoware.proj`.
-
-```sh
-cd ~/autoware.proj/
+```bash
+rocker --nvidia --x11 --user \
+ --volume {path_to_your_workspace} \
+ -- ghcr.io/tier4/pilot-auto:latest
 ```
 
-Build Docker images if you haven't done yet.
+If you locate your workspace under your home directory, you can use the `--home` option instead:
 
-```sh
+```bash
+rocker --nvidia --x11 --user --home \
+  -- ghcr.io/tier4/pilot-auto:latest
+```
+
+To use a customized `.bashrc` for the container:
+
+```bash
+rocker --nvidia --x11 --user --home \
+  --volume $HOME/.bashrc.container:$HOME/.bashrc \
+  -- ghcr.io/tier4/pilot-auto:latest
+```
+
+### Prebuilt image
+
+```bash
+docker run --rm -it \
+  ghcr.io/tier4/pilot-auto:latest-prebuilt
+```
+
+To run with `rocker`:
+
+```bash
+rocker --nvidia --x11 --user \
+  --volume {path_to_your_workspace} \
+  -- ghcr.io/tier4/pilot-auto:latest-prebuilt
+```
+
+If you intend to use pre-existing data such as maps or Rosbags, modify the `--volume` options shown below.
+
+```bash
+rocker --nvidia --x11 --user \
+  --volume {path_to_your_workspace} \
+  --volume {path_to_your_map_data} \
+  --volume {path_to_your_log_data} \
+  -- ghcr.io/tier4/pilot-auto:latest-prebuilt
+```
+
+## Building Docker images on your local machine
+
+If you want to build these images locally for development purposes, run the following command:
+
+```bash
+cd autoware/
 ./docker/build.sh
 ```
 
-Import dependencies if you haven't done yet.
+To build without CUDA, use the `--no-cuda` option:
 
-```sh
-mkdir src
-vcs import src < autoware.proj.repos
+```bash
+./docker/build.sh --no-cuda
 ```
 
-Do your modification to the project just as you want.
+To specify the platform, use the `--platform` option:
 
-#### 2. Launch a container
-
-Open another terminal and launch a container. Note that the command below is slightly different from the example above.
-We use `autoware:base` instead of `autoware:pre-built`, and your home directory will be mounted as we specify the `--home` option.
-
-```sh
-xhost +local:
-rocker --nvidia --x11 --user --home -- autoware:base
+```bash
+./docker/build.sh --platform linux/amd64
+./docker/build.sh --platform linux/arm64
 ```
 
-Or you can manually specify the mount destination
+## Tips
 
-```sh
-rocker --nvidia --x11 --user --volume ~/rosbag_simulation --volume ~/autoware.proj:$HOME/autoware.proj -- autoware:base
+### Precautions for not using `rocker`
+
+If either image is run without `rocker`, then `root` privileges will be used.
+This can affect your local environment as below:
+
+```sh-session
+$ docker run --rm -it -v {path_to_your_workspace}:/autoware ghcr.io/tier4/pilot-auto:latest
+# colcon build
+# exit
+$ rm build/COLCON_IGNORE
+rm: remove write-protected regular empty file 'build/COLCON_IGNORE'? y
+rm: cannot remove 'build/COLCON_IGNORE': Permission denied
 ```
 
-#### 3. Build
+To prevent this error occurring when rocker is not used, there are two suggested methods:
 
-In the container, go to the project directory (in this case `~/autoware.proj`) and build.
+1. Prepare a dedicated workspace for the docker image.
+2. Use Visual Studio Code's [Remote - Containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) extension.
 
-```sh
-cd ~/autoware.proj
-colcon build --symlink-install --cmake-args -DCMAKE_BUILD_TYPE=Release
-```
+   To use the extension, the following settings can be used to create a user account in a similar way to `rocker.  
+   Refer to [this document](https://code.visualstudio.com/remote/advancedcontainers/add-nonroot-user) for more details.
 
-#### 4. Execute
+   ```jsonc
+   // .devcontainer/devcontainer.json
+   {
+     "name": "Pilot.Auto",
+     "build": {
+       "dockerfile": "Dockerfile"
+     },
+     "remoteUser": "autoware",
+     "settings": {
+       "terminal.integrated.defaultProfile.linux": "bash"
+     }
+   }
+   ```
 
-If you want to launch the logging simulator, run the commands below in the container.
+   ```docker
+   # .devcontainer/Dockerfile
+   FROM ghcr.io/tier4/pilot-auto:latest
 
-```sh
-source install/setup.bash
-ros2 launch autoware_launch logging_simulator.launch.xml map_path:=$HOME/rosbag_simulation/map vehicle_model:=lexus sensor_model:=aip_xx1
-```
+   ARG USERNAME=autoware
+   ARG USER_UID=1000
+   ARG USER_GID=$USER_UID
 
-Open another terminal and play a rosbag file.
+   RUN groupadd --gid $USER_GID $USERNAME \
+     && useradd --uid $USER_UID --gid $USER_GID -m $USERNAME \
+     && apt-get update \
+     && apt-get install -y sudo \
+     && echo $USERNAME ALL=\(root\) NOPASSWD:ALL > /etc/sudoers.d/$USERNAME \
+     && chmod 0440 /etc/sudoers.d/$USERNAME
+   ```
 
-```sh
-rocker --nvidia --x11 --user --volume ~/rosbag_simulation -- autoware:pre-built
-ros2 bag play ~/rosbag_simulation/sample/sample.625-2.bag2_0.db3 -r 0.2
-```
+### Using Docker images other than `latest`
 
-NOTE: Autoware-specific message types will be redefined irregularly. Make sure that these two containers have the same message definitions.
+There are also images versioned based on the `date` or `release tag`.  
+Use them when you need a fixed version of the image.
+
+The list of versions can be found [here](https://github.com/tier4/autoware/packages).

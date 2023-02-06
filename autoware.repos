@@ -3,7 +3,7 @@ repositories:
   autoware/universe:
     type: git
     url: https://github.com/tier4/autoware.universe.git
-    version: beta/v0.7.0
+    version: dce7977fdbae664d5afa851dd08f5d6ce3686f2e
   autoware/common:
     type: git
     url: https://github.com/autowarefoundation/autoware_common.git
@@ -11,7 +11,7 @@ repositories:
   autoware/launcher:
     type: git
     url: git@github.com:tier4/autoware_launch.xx1.git
-    version: beta/v0.41.0.0
+    version: 02eadb21d5a2fe2e6240997ec76dc9776e0e228a
   autoware/aip_launcher:
     type: git
     url: https://github.com/tier4/aip_launcher.git
@@ -66,15 +66,16 @@ repositories:
   debug/multi_data_monitor:
     type: git
     url: https://github.com/tier4/multi_data_monitor.git
-    version: 3910fd2c1c22db033900bf0cb5776d9a6dbdbe99
+    version: v1.0.0
   debug/generic_type_utility:
     type: git
     url: https://github.com/tier4/generic_type_utility.git
-    version: 46788027a9e81db9a0f7d3f8c9b5d3ea1eeb7132
+    version: v1.0.0
+  # debug_tools
   debug/debug_tools:
     type: git
     url: git@github.com:tier4/debug_tools.git
-    version: 7bf747bfd094a324a2db8625c8aa11d32968ef3b
+    version: v2023.1.2
   # vendor
   vendor/pacmod_interface:
     type: git
@@ -103,7 +104,7 @@ repositories:
   vendor/foa:
     type: git
     url: git@github.com:tier4/FieldOperatorApplication.git
-    version: beta/v3.1.0
+    version: 41381d2dca61add1a0ce53c603d443997073022a
   vendor/ndt_omp:
     type: git
     url: https://github.com/tier4/ndt_omp.git

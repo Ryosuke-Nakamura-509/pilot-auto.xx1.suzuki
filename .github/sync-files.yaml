@@ -1,25 +1,99 @@
 - repository: autowarefoundation/autoware
   files:
+    # General
+    - source: .github/PULL_REQUEST_TEMPLATE.md
+    - source: .github/PULL_REQUEST_TEMPLATE/small-change.md
+    - source: .github/PULL_REQUEST_TEMPLATE/standard-change.md
     - source: .github/dependabot.yaml
-    # - source: .github/workflows/build.yaml # TODO: Sync after renaming to autoware.repos
+    - source: .github/workflows/backport.yaml
+    - source: .github/workflows/cancel-previous-workflows.yaml
+    - source: .github/workflows/github-release.yaml
     - source: .github/workflows/pre-commit.yaml
     - source: .github/workflows/pre-commit-ansible.yaml
     - source: .github/workflows/pre-commit-optional.yaml
     - source: .github/workflows/semantic-pull-request.yaml
     - source: .github/workflows/spell-check-differential.yaml
-    # - source: .github/workflows/vcs-import.yaml # TODO: Sync after renaming to autoware.repos
+    - source: .github/workflows/sync-files.yaml
     - source: .clang-format
-    - source: .markdown-link-check.json
+    - source: .clang-tidy
+    - source: .gitignore
     - source: .markdownlint.yaml
-    # - source: .pre-commit-config.yaml # TODO: Sync after yamllint and ansible-lint have passed
+    - source: .pre-commit-config.yaml
     - source: .pre-commit-config-ansible.yaml
     - source: .pre-commit-config-optional.yaml
     - source: .prettierignore
     - source: .prettierrc.yaml
+    - source: .shellcheckrc
     - source: .yamllint.yaml
     - source: CPPLINT.cfg
     - source: setup.cfg
 
-- repository: autowarefoundation/autoware_common
-  files:
-    - source: .github/workflows/sync-files.yaml
+    # Autoware Workflows
+    - source: .github/workflows/build-main.yaml
+      pre-commands: |
+        sd "GITHUB_TOKEN" "REPO_TOKEN" {source}
+
+    - source: .github/workflows/load-env.yaml
+
+    - source: .github/workflows/setup-universe.yaml
+      dest: .github/workflows/setup-local-dev-env.yaml
+      pre-commands: |
+        sd "setup-universe" "setup-local-dev-env" {source}
+        sd "universe" "local_dev_env" {source}
+
+    - source: .github/workflows/vcs-import.yaml
+      pre-commands: |
+        sd "GITHUB_TOKEN" "REPO_TOKEN" {source}
+        sd -- \
+        "     - name: Set git config" \
+        "     - name: Register kvaser-linux repository
+                run: |
+                  sudo apt-get -y update
+                  sudo apt-get -y install software-properties-common
+                  sudo add-apt-repository -y ppa:astuff/kvaser-linux
+                  sudo apt-get -y update
+
+              - name: Set git config" {source}
+
+    # Setup
+    - source: amd64.env
+    - source: arm64.env
+
+    - source: setup-dev-env.sh
+      pre-commands: |
+        sd "autoware.dev_env" "pilot_auto.dev_env" {source}
+        sd "dev_env.universe" "dev_env.local_dev_env" {source}
+
+    - source: ansible-galaxy-requirements.yaml
+      pre-commands: |
+        latest_hash=$(git ls-remote --heads https://github.com/autowarefoundation/autoware.git refs/heads/main | awk '{print $1}')
+        sd "\z" \
+        "
+          - name: https://github.com/autowarefoundation/autoware.git#/ansible
+            type: git
+            version: $latest_hash
+        " {source}
+
+    # Docker
+    - source: docker/README.md
+      pre-commands: |
+        sd "autowarefoundation" "tier4" {source}
+        sd "autoware-universe" "pilot-auto" {source}
+        sd "Autoware Universe" "Pilot.Auto" {source}
+        sd "Autoware" "Pilot.Auto" {source}
+        sd -s "../" "https://github.com/autowarefoundation/autoware/tree/main/" {source}
+
+    - source: docker/build.sh
+      pre-commands: |
+        sd "autowarefoundation" "tier4" {source}
+        sd "autoware-universe" "pilot-auto" {source}
+
+    - source: docker/autoware-universe/docker-bake.hcl
+      dest: docker/pilot-auto/docker-bake.hcl
+      pre-commands: |
+        sd "autoware-universe" "pilot-auto" {source}
+
+    - source: docker/autoware-universe/Dockerfile
+      dest: docker/pilot-auto/Dockerfile
+      pre-commands: |
+        sd "universe" "local_dev_env" {source}

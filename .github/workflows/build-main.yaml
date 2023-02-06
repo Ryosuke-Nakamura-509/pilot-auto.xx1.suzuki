@@ -1,37 +1,25 @@
-name: vcs-import
+name: build-main
 
 on:
-  pull_request:
+  schedule:
+    - cron: 0 12 * * *
   workflow_dispatch:
 
 jobs:
   load-env:
     uses: ./.github/workflows/load-env.yaml
 
-  vcs-import:
+  build-main:
     needs: load-env
     runs-on: ubuntu-latest
-    container: ros:${{ needs.load-env.outputs.rosdistro }}
+    container: ${{ needs.load-env.outputs.base-image }}
     steps:
       - name: Check out repository
         uses: actions/checkout@v3
 
-      - name: Install pip for rosdep
+      - name: Run setup script
         run: |
-          sudo apt-get -y update
-          sudo apt-get -y install python3-pip
-
-      - name: Register AutonomouStuff repository
-        uses: autowarefoundation/autoware-github-actions/register-autonomoustuff-repository@v1
-        with:
-          rosdistro: ${{ needs.load-env.outputs.rosdistro }}
-
-      - name: Register kvaser-linux repository
-        run: |
-          sudo apt-get -y update
-          sudo apt-get -y install software-properties-common
-          sudo add-apt-repository -y ppa:astuff/kvaser-linux
-          sudo apt-get -y update
+          ./setup-dev-env.sh -y
 
       - name: Set git config
         uses: autowarefoundation/autoware-github-actions/set-git-config@v1
@@ -52,3 +40,8 @@ jobs:
           sudo apt-get -y update
           rosdep update
           DEBIAN_FRONTEND=noninteractive rosdep install -y --from-paths src --ignore-src --rosdistro ${{ needs.load-env.outputs.rosdistro }}
+
+      - name: Build
+        run: |
+          . /opt/ros/${{ needs.load-env.outputs.rosdistro }}/setup.sh
+          colcon build --event-handlers console_cohesion+ --cmake-args -DCMAKE_BUILD_TYPE=Release

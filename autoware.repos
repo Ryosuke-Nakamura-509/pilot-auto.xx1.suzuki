@@ -39,7 +39,7 @@ repositories:
   autoware/individual_params:
     type: git
     url: git@github.com:tier4/autoware_individual_params.jpntaxi.git
-    version: 19d3a83913008544bd855442b0ddd534a4558764
+    version: 7559ca09e80c9a07735d53692583b373593d2d24
   autoware/ml_model_provider:
     type: git
     url: git@github.com:tier4/ml_model_provider.git

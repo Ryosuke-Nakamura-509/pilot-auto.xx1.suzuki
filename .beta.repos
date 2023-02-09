@@ -61,7 +61,7 @@ repositories:
   ecu_system_setup:
     type: git
     url: git@github.com:tier4/autoware_ecu_system_setup.git
-    version: 8d85c51a68b7e09d003488b48b379c46bc0f340d
+    version: e30246e55b48fa4bd43ed9906c1eab0ddeee1ce9
   # multi_data_monitor
   debug/multi_data_monitor:
     type: git

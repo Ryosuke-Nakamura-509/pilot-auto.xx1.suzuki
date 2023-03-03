@@ -3,15 +3,15 @@ repositories:
   autoware/universe:
     type: git
     url: https://github.com/tier4/autoware.universe.git
-    version: ec86e6ad506f44a3ccd0b9c80ef90d8b312b6b7e
+    version: d9ee9189941ead8f3fa96f8d12f5a4f3f5d86eed
   autoware/common:
     type: git
     url: https://github.com/autowarefoundation/autoware_common.git
     version: e1e46ca2206e0521c9d1237850869b7919214911
   autoware/launcher:
     type: git
-    url: git@github.com:tier4/autoware_launch.xx1.git
-    version: 2e2517289b4eca4a3f13b8d36b974d57298e998f
+    url: git@github.com:tier4/autoware_launch.xx1.suzuki.git
+    version: beta/v0.41.1.0
   autoware/aip_launcher:
     type: git
     url: https://github.com/tier4/aip_launcher.git
@@ -39,8 +39,8 @@ repositories:
   ## TODO replace to solio individual param
   autoware/individual_params:
     type: git
-    url: git@github.com:tier4/autoware_individual_params.jpntaxi.git
-    version: 7559ca09e80c9a07735d53692583b373593d2d24
+    url: git@github.com:tier4/individual_params.xx1.suzuki.git
+    version: 5745bca00d26a5351d4e68253b37be8b88bd2a2c
   autoware/ml_model_provider:
     type: git
     url: git@github.com:tier4/ml_model_provider.git
@@ -135,11 +135,11 @@ repositories:
   description/vehicle/solio_description:
     type: git
     url: git@github.com:tier4/solio_description.iv.git
-    version: main
+    version: be3c4e7cd2ca9d0b7b398ee618b559477b8b5f62
   vendor/solio_interface:
     type: git
     url: git@github.com:tier4/solio_interface.git
-    version: a729b53b2722a1f0163b248b0e2ca58daafb931c
+    version: beta/v0.41.1.0
   vendor/septentrio:
     type: git
     url: https://github.com/tier4/septentrio_gnss_driver.git

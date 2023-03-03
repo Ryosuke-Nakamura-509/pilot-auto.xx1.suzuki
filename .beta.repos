@@ -3,15 +3,15 @@ repositories:
   autoware/universe:
     type: git
     url: https://github.com/tier4/autoware.universe.git
-    version: beta/v0.7.0
+    version: beta/v0.7.0-odaiba1
   autoware/common:
     type: git
     url: https://github.com/autowarefoundation/autoware_common.git
-    version: 6916df26fafe6749db4b1d5bd6636a92444fc48d
+    version: e1e46ca2206e0521c9d1237850869b7919214911
   autoware/launcher:
     type: git
     url: git@github.com:tier4/autoware_launch.xx1.git
-    version: beta/v0.41.0.0
+    version: beta/v0.41.1.0
   autoware/aip_launcher:
     type: git
     url: https://github.com/tier4/aip_launcher.git
@@ -39,7 +39,7 @@ repositories:
   autoware/individual_params:
     type: git
     url: git@github.com:tier4/autoware_individual_params.jpntaxi.git
-    version: 19d3a83913008544bd855442b0ddd534a4558764
+    version: 7559ca09e80c9a07735d53692583b373593d2d24
   autoware/ml_model_provider:
     type: git
     url: git@github.com:tier4/ml_model_provider.git
@@ -61,20 +61,21 @@ repositories:
   ecu_system_setup:
     type: git
     url: git@github.com:tier4/autoware_ecu_system_setup.git
-    version: 8d85c51a68b7e09d003488b48b379c46bc0f340d
+    version: e30246e55b48fa4bd43ed9906c1eab0ddeee1ce9
   # multi_data_monitor
   debug/multi_data_monitor:
     type: git
     url: https://github.com/tier4/multi_data_monitor.git
-    version: 3910fd2c1c22db033900bf0cb5776d9a6dbdbe99
+    version: v1.0.0
   debug/generic_type_utility:
     type: git
     url: https://github.com/tier4/generic_type_utility.git
-    version: 46788027a9e81db9a0f7d3f8c9b5d3ea1eeb7132
+    version: v1.0.0
+  # debug_tools
   debug/debug_tools:
     type: git
     url: git@github.com:tier4/debug_tools.git
-    version: 7bf747bfd094a324a2db8625c8aa11d32968ef3b
+    version: v2023.1.2
   # vendor
   vendor/pacmod_interface:
     type: git
@@ -103,7 +104,7 @@ repositories:
   vendor/foa:
     type: git
     url: git@github.com:tier4/FieldOperatorApplication.git
-    version: beta/v3.1.0
+    version: 1a4e8371a6b90a706d599c7c51c5c785342874fc
   vendor/ndt_omp:
     type: git
     url: https://github.com/tier4/ndt_omp.git

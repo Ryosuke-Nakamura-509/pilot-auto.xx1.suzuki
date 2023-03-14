@@ -50,39 +50,11 @@ repositories:
     type: git
     url: https://github.com/tier4/sensor_component_description.git
     version: 475857daeb4c4883ab0295336713364b326e8278
-  ## TODO replace to solio individual param
-  description/vehicle/jpntaxi_description:
-    type: git
-    url: git@github.com:tier4/jpntaxi_description.git
-    version: f45cd47158df8176f4aafc9b7934bd83090a89ea
-  description/vehicle/lexus_description:
-    type: git
-    url: https://github.com/tier4/lexus_description.iv.git
-    version: 0da46f4657b513c3b4c091413b1cf32af085e1a5
   # ecu_system_setup
   ecu_system_setup:
     type: git
     url: git@github.com:tier4/autoware_ecu_system_setup.git
     version: e30246e55b48fa4bd43ed9906c1eab0ddeee1ce9
-  # multi_data_monitor
-  debug/multi_data_monitor:
-    type: git
-    url: https://github.com/tier4/multi_data_monitor.git
-    version: v1.0.0
-  debug/generic_type_utility:
-    type: git
-    url: https://github.com/tier4/generic_type_utility.git
-    version: v1.0.0
-  # debug_tools
-  debug/debug_tools:
-    type: git
-    url: git@github.com:tier4/debug_tools.git
-    version: v2023.1.2
-  # vendor
-  vendor/pacmod_interface:
-    type: git
-    url: https://github.com/tier4/pacmod_interface.git
-    version: b5ae20345f2551da0c6e4140a3dc3479d64efd1f
   vendor/usb_cam: # TODO remove after https://github.com/ros-drivers/usb_cam/pull/132 is available in foxy
     type: git
     url: https://github.com/tier4/usb_cam.git

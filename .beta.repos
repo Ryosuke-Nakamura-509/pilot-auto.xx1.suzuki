@@ -39,7 +39,7 @@ repositories:
   autoware/individual_params:
     type: git
     url: git@github.com:tier4/autoware_individual_params.xx1.suzuki.git
-    version: 5745bca00d26a5351d4e68253b37be8b88bd2a2c
+    version: main
   autoware/ml_model_provider:
     type: git
     url: git@github.com:tier4/ml_model_provider.git

@@ -3,14 +3,14 @@ repositories:
     type: git
     url: https://github.com/tier4/scenario_simulator_v2.git
     version: ca463ec2396436b6c686b287c859fa84dbffd455
-  simulator/logsim:
-    type: git
-    url: git@github.com:tier4/logsim.git
-    version: 7ae2676baafd4334b812cbe5e32155cc9db53b61
-  simulator/ndt_convergence_evaluation:
-    type: git
-    url: git@github.com:tier4/ndt_convergence_evaluation.git
-    version: e088038aad8ebd5efc6ed013e8b22d956f4bc56e
+  #simulator/logsim:
+  #  type: git
+  #  url: git@github.com:tier4/logsim.git
+  #  version: 7ae2676baafd4334b812cbe5e32155cc9db53b61
+  #simulator/ndt_convergence_evaluation:
+  #  type: git
+  #  url: git@github.com:tier4/ndt_convergence_evaluation.git
+  #  version: e088038aad8ebd5efc6ed013e8b22d956f4bc56e
   simulator/driving_log_replayer:
     type: git
     url: https://github.com/tier4/driving_log_replayer.git

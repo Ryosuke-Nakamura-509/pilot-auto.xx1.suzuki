@@ -19,7 +19,7 @@ simulations:
         cpu: 8
         memory: 16384
       parameters:
-        vehicle_model: jpntaxi
+        vehicle_model: solio
         sensor_model: aip_xx1
         use_foa: "true"
         use_external_lc: "false"

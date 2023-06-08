@@ -116,3 +116,7 @@ repositories:
     type: git
     url: https://github.com/tier4/septentrio_gnss_driver.git
     version: d6da33824df8cf5d00cd7762fbe27e8dd5566500
+  vendor/hesai_pandar:
+    type: git
+    url: https://github.com/tier4/hesai_pandar.git
+    version: 4afd4023fec3374e70790ae0ea42184f8222b301

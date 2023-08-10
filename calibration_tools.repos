@@ -2,11 +2,11 @@ repositories:
   autoware/calibration_tools:
     type: git
     url: git@github.com:tier4/CalibrationTools.git
-    version: a99b2c8bd3ae66040f65f503997126faa723a8aa
+    version: b21cbc79c9854bc06c7534a06e66d9d4512f446d
   vendor/lidartag:
     type: git
     url: git@github.com:tier4/LiDARTag.git
-    version: b320ff4b0974e4eae7bc22902355e9c77a475c53
+    version: e28f194a942eb7d7ca3759a7805ff5c91c842110
   vendor/lidartag_msgs:
     type: git
     url: git@github.com:tier4/LiDARTag_msgs.git
@@ -14,11 +14,11 @@ repositories:
   vendor/apriltag_msgs:
     type: git
     url: git@github.com:christianrauch/apriltag_msgs.git
-    version: 0c42545ff53a1a2aa98ff5fe045e3001a316e884
+    version: 84bd66c0120f340365437929d564ef390513387d
   vendor/apriltag_ros:
     type: git
     url: git@github.com:christianrauch/apriltag_ros.git
-    version: 26f962ceaabd350a3a684230a7c961c93d3957b1
+    version: e109dea361900bdb2fd36d7ce49088eecce04196
   vendor/ros2_numpy:
     type: git
     url: git@github.com:Box-Robotics/ros2_numpy.git

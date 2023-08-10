@@ -37,6 +37,23 @@ simulations:
         cpu: 8
         memory: 16384
 
+  - name: perception
+    type: perception
+    simulator:
+      deployment:
+        type: container
+        artifact: main
+      runtime:
+        type: gpu1/amd64/large
+      pre_tasks:
+        - exec: source /home/autoware/autoware.proj/install/setup.bash && ros2 run ml_model_provider convert_onnx_to_trt_engine.sh --package-name lidar_centerpoint --model-name aip_xx1 --model-path $(ros2 pkg prefix ml_model_provider --share)/data/lidar_centerpoint
+          mounts:
+            - volume: model
+      volumes:
+        - name: model
+          path: /home/autoware/autoware.proj/install/ml_model_provider/share/ml_model_provider/data/lidar_centerpoint
+          preserve_original_files: true
+
 release:
   components:
     - name: autoware

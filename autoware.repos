@@ -10,8 +10,8 @@ repositories:
     version: 536b628d6cc87ddf877efb351ff9d38f12fec620
   autoware/launcher:
     type: git
-    url: git@github.com:tier4/autoware_launch.xx1.git
-    version: 0fbdaf27cd4615204d0d78579b8447853091174b
+    url: git@github.com:tier4/autoware_launch.xx1.suzuki.git
+    version: beta/v0.42.0.0
   autoware/aip_launcher:
     type: git
     url: https://github.com/tier4/aip_launcher.git
@@ -38,8 +38,8 @@ repositories:
     version: 8d0fc25179d62f9de6d3ec235f652b42e3c0dc11
   autoware/individual_params:
     type: git
-    url: git@github.com:tier4/autoware_individual_params.jpntaxi.git
-    version: cdd84a5ac2bda33a89aff753b173f1ec659d7ea9
+    url: git@github.com:tier4/individual_params.xx1.suzuki.git
+    version: 1523852053e379b3c73607e4f32c3fb198482c0a
   autoware/ml_model_provider:
     type: git
     url: git@github.com:tier4/ml_model_provider.git
@@ -111,15 +111,15 @@ repositories:
     type: git
     url: https://github.com/tier4/septentrio_gnss_driver.git
     version: d6da33824df8cf5d00cd7762fbe27e8dd5566500
-  #vendor/eagleye:
-  #  type: git
-  #  url: https://github.com/MapIV/eagleye.git
-  #  version: c0a86a3ed77bc968407912c154975d7cd63bcbf6
-  #vendor/rtklib_ros_bridge:
-  #  type: git
-  #  url: https://github.com/MapIV/rtklib_ros_bridge.git
-  #  version: d499bc1efb051924be23c0f4a381f99ab4dcdeac
-  #vendor/llh_converter:
-  #  type: git
-  #  url: https://github.com/MapIV/llh_converter.git
-  #  version: 4d4fb18d43800a45e08738dfe18ae3b34903f143
+  vendor/eagleye:
+    type: git
+    url: https://github.com/MapIV/eagleye.git
+    version: c0a86a3ed77bc968407912c154975d7cd63bcbf6
+  vendor/rtklib_ros_bridge:
+    type: git
+    url: https://github.com/MapIV/rtklib_ros_bridge.git
+    version: d499bc1efb051924be23c0f4a381f99ab4dcdeac
+  vendor/llh_converter:
+    type: git
+    url: https://github.com/MapIV/llh_converter.git
+    version: 4d4fb18d43800a45e08738dfe18ae3b34903f143

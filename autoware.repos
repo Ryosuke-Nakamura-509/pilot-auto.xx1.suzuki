@@ -54,7 +54,7 @@ repositories:
   ecu_system_setup:
     type: git
     url: git@github.com:tier4/autoware_ecu_system_setup.git
-    version: e30246e55b48fa4bd43ed9906c1eab0ddeee1ce9
+    version: b5ca7381bc0dcc4122cc6c185e3cbfd716fa4a8c
   vendor/usb_cam: # TODO remove after https://github.com/ros-drivers/usb_cam/pull/132 is available in foxy
     type: git
     url: https://github.com/tier4/usb_cam.git

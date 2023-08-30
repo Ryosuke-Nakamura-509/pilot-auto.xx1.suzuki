@@ -79,6 +79,10 @@ repositories:
     type: git
     url: https://github.com/MapIV/transport_drivers.git
     version: boost
+  vendor/foa:
+    type: git
+    url: git@github.com:tier4/FieldOperatorApplication.git
+    version: 3.1.0
   vendor/ndt_omp:
     type: git
     url: https://github.com/tier4/ndt_omp.git

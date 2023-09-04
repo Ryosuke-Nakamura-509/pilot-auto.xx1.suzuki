@@ -107,7 +107,7 @@ repositories:
   description/vehicle/solio_description:
     type: git
     url: git@github.com:tier4/solio_description.iv.git
-    version: be3c4e7cd2ca9d0b7b398ee618b559477b8b5f62
+    version: d5194c3abdffcc8f90b7102e0ab6cb4fbf175a68
   vendor/solio_interface:
     type: git
     url: git@github.com:tier4/solio_interface.git

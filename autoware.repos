@@ -53,8 +53,8 @@ repositories:
   # ecu_system_setup
   ecu_system_setup:
     type: git
-    url: git@github.com:tier4/autoware_ecu_system_setup.git
-    version: b5ca7381bc0dcc4122cc6c185e3cbfd716fa4a8c
+    url: git@github.com:tier4/autoware_ecu_system_setup.suzuki.git
+    version: hanahaku
   vendor/usb_cam: # TODO remove after https://github.com/ros-drivers/usb_cam/pull/132 is available in foxy
     type: git
     url: https://github.com/tier4/usb_cam.git

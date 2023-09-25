@@ -74,7 +74,7 @@ repositories:
   vendor/nebula:
     type: git
     url: https://github.com/tier4/nebula.git
-    version: fix-time-decoding
+    version: main
   vendor/transport_drivers:
     type: git
     url: https://github.com/MapIV/transport_drivers.git

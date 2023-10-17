@@ -3,7 +3,7 @@ repositories:
   autoware/universe:
     type: git
     url: https://github.com/tier4/autoware.universe.git
-    version: c2080b09a161731fb197af9d5f9bb79daed14697
+    version: beta/v0.8.1-fix-autoware_auto_tf2
   autoware/common:
     type: git
     url: https://github.com/autowarefoundation/autoware_common.git

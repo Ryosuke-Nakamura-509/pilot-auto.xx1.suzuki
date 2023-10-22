@@ -3,7 +3,7 @@ repositories:
   autoware/universe:
     type: git
     url: https://github.com/tier4/autoware.universe.git
-    version: v0.7.3_bicycle_crosswalk_yaw
+    version: beta/v0.7.3_bicycle_crosswalk_yaw
   autoware/common:
     type: git
     url: https://github.com/autowarefoundation/autoware_common.git

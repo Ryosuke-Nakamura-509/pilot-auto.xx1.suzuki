@@ -116,3 +116,7 @@ repositories:
     type: git
     url: https://github.com/tier4/septentrio_gnss_driver.git
     version: d6da33824df8cf5d00cd7762fbe27e8dd5566500
+  vendor/jsk_visualization
+    type: git
+    url: git@github.com:Kotakku/jsk_visualization.git
+    version: feat/ros2

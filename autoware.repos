@@ -3,7 +3,7 @@ repositories:
   autoware/universe:
     type: git
     url: https://github.com/Ryosuke-Nakamura-509/autoware-universe.git
-    version: crosswalk_tf2_edit
+    version: master
   autoware/common:
     type: git
     url: https://github.com/autowarefoundation/autoware_common.git

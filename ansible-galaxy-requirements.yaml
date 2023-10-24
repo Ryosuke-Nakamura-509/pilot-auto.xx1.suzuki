@@ -4,4 +4,4 @@ collections:
 
   - name: https://github.com/autowarefoundation/autoware.git#/ansible
     type: git
-    version: 255ddabbfd37043f691d44f5526326cc945c3239
+    version: b92953c3ded0bcfb0d7f56b686011888547ed43c
